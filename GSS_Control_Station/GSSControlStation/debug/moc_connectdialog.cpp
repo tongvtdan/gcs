@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'connectdialog.h'
 **
-** Created: Fri Mar 8 17:12:56 2013
+** Created: Sat Mar 9 09:36:58 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_connectDialog[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       1,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -32,14 +32,12 @@ static const uint qt_meta_data_connectDialog[] = {
 
  // slots: signature, parameters, type, tag, flags
       15,   14,   14,   14, 0x08,
-      39,   14,   14,   14, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_connectDialog[] = {
     "connectDialog\0\0connectButton_clicked()\0"
-    "on_ReadyRead()\0"
 };
 
 void connectDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -49,7 +47,6 @@ void connectDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         connectDialog *_t = static_cast<connectDialog *>(_o);
         switch (_id) {
         case 0: _t->connectButton_clicked(); break;
-        case 1: _t->on_ReadyRead(); break;
         default: ;
         }
     }
@@ -88,9 +85,9 @@ int connectDialog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 1)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 1;
     }
     return _id;
 }

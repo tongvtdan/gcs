@@ -17,6 +17,7 @@ public:
     
 private:
     Ui::consolewidget *ui;
+    void on_ReadyRead();
 };
 
 #endif // CONSOLEWIDGET_H

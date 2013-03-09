@@ -15,12 +15,12 @@ class connectDialog : public QDialog
     Q_OBJECT
     
 public:
+
     explicit connectDialog(QWidget *parent = 0);
     ~connectDialog();
     
 private slots:
     void connectButton_clicked();
-    void on_ReadyRead();
 
 private:
     Ui::connectDialog *ui;

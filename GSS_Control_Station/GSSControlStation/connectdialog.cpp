@@ -67,8 +67,6 @@ connectDialog::connectDialog(QWidget *parent) :
     //connect(ui->sendButton,SIGNAL(clicked()),SLOT(sendButton_clicked()));
     //connect(ui->cleartranButton,SIGNAL(clicked()),SLOT(cleartranButton_clicked()));
     //connect(ui->clearRecButton,SIGNAL(clicked()),SLOT(clearreceiButton_clicked()));
-    //connect(mytimer, SIGNAL(timeout()), SLOT(on_ReadyRead()));
-    //connect(myport,SIGNAL(readyRead()),SLOT(on_ReadyRead()));
 }
 
 connectDialog::~connectDialog()
@@ -101,24 +99,5 @@ void connectDialog::connectButton_clicked()
     }
 }
 
-void connectDialog::on_ReadyRead()
-{
-    /* EventDriven test */
-//    if (qApp->arguments().contains(QLatin1String("--debug")) && myport->queryMode()==QextSerialPort::EventDriven){
-//        ui->receiTextEdit->appendPlainText(QString::number(myport->bytesAvailable()));
-//        return;
-//    }
-
-//        if (myport->queryMode()==QextSerialPort::EventDriven){
-//            ui->receiTextEdit->appendPlainText(QString::number(myport->bytesAvailable()));
-//            return;
-//        }
-
-//    if (myport->bytesAvailable()) {
-//        ui->receiTextEdit->moveCursor(QTextCursor::End);
-//        //ui->receiTextEdit->insertPlainText(QString::fromLatin1(myport->readAll()));
-//        ui->receiTextEdit->insertPlainText(QString::fromLatin1(myport->readLine()));
-//    }
-}
 
 
