@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'connectdialog.h'
 **
-** Created: Sat Mar 9 09:36:58 2013
+** Created: Sat Mar 9 15:08:27 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -37,7 +37,7 @@ static const uint qt_meta_data_connectDialog[] = {
 };
 
 static const char qt_meta_stringdata_connectDialog[] = {
-    "connectDialog\0\0connectButton_clicked()\0"
+    "connectDialog\0\0ComOKBtn_clicked()\0"
 };
 
 void connectDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -46,7 +46,7 @@ void connectDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         Q_ASSERT(staticMetaObject.cast(_o));
         connectDialog *_t = static_cast<connectDialog *>(_o);
         switch (_id) {
-        case 0: _t->connectButton_clicked(); break;
+        case 0: _t->ComOKBtn_clicked(); break;
         default: ;
         }
     }

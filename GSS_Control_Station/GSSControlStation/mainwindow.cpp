@@ -34,11 +34,16 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->mainToolBar->addAction(ui->actionEngineer);
     ui->mainToolBar->addAction(ui->actionOperator);
 
+
+    my_connectDialog = new connectDialog(this);
+
     loadStyle(currentStyle);
 
     connect(ui->actionAbout_GSSControlStation,SIGNAL(triggered()),SLOT(actionAbout_Clicked()));
     connect(ui->actionDebug_Console,SIGNAL(triggered()),SLOT(actionDebugConsole_triggered()));
-    connect(ui->actionConnect,SIGNAL(triggered()),SLOT(actionConnect_triggered()));
+    connect(ui->actionComSettings,SIGNAL(triggered()),SLOT(actionComSettings_triggered()));
+    connect(ui->actionComOpenClose,SIGNAL(triggered()),SLOT(actionComOpenClose_triggered()));
+
 
 }
 
@@ -132,9 +137,25 @@ void MainWindow::createDockWindows()
     addDockWidget(Qt::BottomDockWidgetArea,consoleDockWidget);
 }
 
-void MainWindow::actionConnect_triggered()
+void MainWindow::actionComSettings_triggered()
 {
-    my_connectDialog = new connectDialog(this);
     my_connectDialog->show();
+    m_port = my_connectDialog->myport;
+
+}
+
+void MainWindow::actionComOpenClose_triggered()
+{
+
+    if(!m_port->isOpen())
+    {
+        m_port->open(QIODevice::ReadWrite);
+        ui->actionComOpenClose->setText("Close");
+    }
+    else{
+         m_port->close();
+         ui->actionComOpenClose->setText("Open");
+    }
+
 }
 

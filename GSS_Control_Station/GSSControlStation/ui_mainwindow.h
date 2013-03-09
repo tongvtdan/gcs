@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Sat Mar 9 08:50:26 2013
+** Created: Sat Mar 9 15:50:28 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -30,7 +30,7 @@ public:
     QAction *actionLoad_Settings;
     QAction *actionSave_Settings;
     QAction *actionExit;
-    QAction *actionConnect;
+    QAction *actionComSettings;
     QAction *actionOperator;
     QAction *actionEngineer;
     QAction *actionSystem_configuration;
@@ -38,7 +38,7 @@ public:
     QAction *actionParameter;
     QAction *actionSystem_Status;
     QAction *actionAbout_GSSControlStation;
-    QAction *actionDisconnect;
+    QAction *actionComOpenClose;
     QWidget *centralWidget;
     QMenuBar *menuBar;
     QMenu *menuFile;
@@ -80,11 +80,11 @@ public:
         QIcon icon3;
         icon3.addFile(QString::fromUtf8(":/files/images_icons/apps/button_cancel_256.ico"), QSize(), QIcon::Normal, QIcon::Off);
         actionExit->setIcon(icon3);
-        actionConnect = new QAction(MainWindow);
-        actionConnect->setObjectName(QString::fromUtf8("actionConnect"));
+        actionComSettings = new QAction(MainWindow);
+        actionComSettings->setObjectName(QString::fromUtf8("actionComSettings"));
         QIcon icon4;
         icon4.addFile(QString::fromUtf8(":/files/images_icons/apps/connect.ico"), QSize(), QIcon::Normal, QIcon::Off);
-        actionConnect->setIcon(icon4);
+        actionComSettings->setIcon(icon4);
         actionOperator = new QAction(MainWindow);
         actionOperator->setObjectName(QString::fromUtf8("actionOperator"));
         QIcon icon5;
@@ -114,11 +114,12 @@ public:
         QIcon icon9;
         icon9.addFile(QString::fromUtf8(":/files/images_icons/apps/info_box_blue.ico"), QSize(), QIcon::Normal, QIcon::Off);
         actionAbout_GSSControlStation->setIcon(icon9);
-        actionDisconnect = new QAction(MainWindow);
-        actionDisconnect->setObjectName(QString::fromUtf8("actionDisconnect"));
+        actionComOpenClose = new QAction(MainWindow);
+        actionComOpenClose->setObjectName(QString::fromUtf8("actionComOpenClose"));
         QIcon icon10;
         icon10.addFile(QString::fromUtf8(":/files/images_icons/apps/disconnect.ico"), QSize(), QIcon::Normal, QIcon::Off);
-        actionDisconnect->setIcon(icon10);
+        icon10.addFile(QString::fromUtf8(":/files/images_icons/apps/connect.ico"), QSize(), QIcon::Normal, QIcon::On);
+        actionComOpenClose->setIcon(icon10);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         MainWindow->setCentralWidget(centralWidget);
@@ -154,8 +155,8 @@ public:
         menuFile->addAction(actionLoad_Settings);
         menuFile->addAction(actionSave_Settings);
         menuFile->addAction(actionExit);
-        menuCommunication->addAction(actionConnect);
-        menuCommunication->addAction(actionDisconnect);
+        menuCommunication->addAction(actionComSettings);
+        menuCommunication->addAction(actionComOpenClose);
         menuPerspectives->addAction(actionOperator);
         menuPerspectives->addAction(actionEngineer);
         menuMain_Widgits->addAction(actionSystem_configuration);
@@ -175,7 +176,7 @@ public:
         actionLoad_Settings->setText(QApplication::translate("MainWindow", "Load Settings", 0, QApplication::UnicodeUTF8));
         actionSave_Settings->setText(QApplication::translate("MainWindow", "Save Settings", 0, QApplication::UnicodeUTF8));
         actionExit->setText(QApplication::translate("MainWindow", "Exit", 0, QApplication::UnicodeUTF8));
-        actionConnect->setText(QApplication::translate("MainWindow", "Connect", 0, QApplication::UnicodeUTF8));
+        actionComSettings->setText(QApplication::translate("MainWindow", "COM Settigs", 0, QApplication::UnicodeUTF8));
         actionOperator->setText(QApplication::translate("MainWindow", "Operator", 0, QApplication::UnicodeUTF8));
         actionEngineer->setText(QApplication::translate("MainWindow", "Engineer", 0, QApplication::UnicodeUTF8));
         actionSystem_configuration->setText(QApplication::translate("MainWindow", "System Configuration", 0, QApplication::UnicodeUTF8));
@@ -183,7 +184,7 @@ public:
         actionParameter->setText(QApplication::translate("MainWindow", "Parameter", 0, QApplication::UnicodeUTF8));
         actionSystem_Status->setText(QApplication::translate("MainWindow", "System Status", 0, QApplication::UnicodeUTF8));
         actionAbout_GSSControlStation->setText(QApplication::translate("MainWindow", "About GSSControlStation", 0, QApplication::UnicodeUTF8));
-        actionDisconnect->setText(QApplication::translate("MainWindow", "Disconnect", 0, QApplication::UnicodeUTF8));
+        actionComOpenClose->setText(QApplication::translate("MainWindow", "Connect", 0, QApplication::UnicodeUTF8));
         menuFile->setTitle(QApplication::translate("MainWindow", "File", 0, QApplication::UnicodeUTF8));
         menuCommunication->setTitle(QApplication::translate("MainWindow", "Communication", 0, QApplication::UnicodeUTF8));
         menuPerspectives->setTitle(QApplication::translate("MainWindow", "Perspectives", 0, QApplication::UnicodeUTF8));

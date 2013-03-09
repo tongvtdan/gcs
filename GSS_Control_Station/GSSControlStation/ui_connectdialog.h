@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'connectdialog.ui'
 **
-** Created: Fri Mar 8 17:12:54 2013
+** Created: Sat Mar 9 15:42:16 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -49,11 +49,10 @@ public:
     QHBoxLayout *horizontalLayout_6;
     QLabel *querymodelabel;
     QComboBox *querymodeBox;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout_8;
-    QLabel *linkstatuslabel;
     QHBoxLayout *horizontalLayout_7;
-    QPushButton *connectButton;
+    QPushButton *ComOKBtn;
     QPushButton *cancelButton;
 
     void setupUi(QDialog *connectDialog)
@@ -167,25 +166,20 @@ public:
 
         verticalLayout->addLayout(horizontalLayout_6);
 
-        widget = new QWidget(connectDialog);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(9, 263, 221, 27));
-        horizontalLayout_8 = new QHBoxLayout(widget);
+        layoutWidget = new QWidget(connectDialog);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(9, 263, 230, 27));
+        horizontalLayout_8 = new QHBoxLayout(layoutWidget);
         horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
         horizontalLayout_8->setContentsMargins(0, 0, 0, 0);
-        linkstatuslabel = new QLabel(widget);
-        linkstatuslabel->setObjectName(QString::fromUtf8("linkstatuslabel"));
-
-        horizontalLayout_8->addWidget(linkstatuslabel);
-
         horizontalLayout_7 = new QHBoxLayout();
         horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
-        connectButton = new QPushButton(widget);
-        connectButton->setObjectName(QString::fromUtf8("connectButton"));
+        ComOKBtn = new QPushButton(layoutWidget);
+        ComOKBtn->setObjectName(QString::fromUtf8("ComOKBtn"));
 
-        horizontalLayout_7->addWidget(connectButton);
+        horizontalLayout_7->addWidget(ComOKBtn);
 
-        cancelButton = new QPushButton(widget);
+        cancelButton = new QPushButton(layoutWidget);
         cancelButton->setObjectName(QString::fromUtf8("cancelButton"));
 
         horizontalLayout_7->addWidget(cancelButton);
@@ -210,8 +204,7 @@ public:
         databitslabel->setText(QApplication::translate("connectDialog", "DataBits", 0, QApplication::UnicodeUTF8));
         stopbitslabel->setText(QApplication::translate("connectDialog", "StopBits", 0, QApplication::UnicodeUTF8));
         querymodelabel->setText(QApplication::translate("connectDialog", "QueryMode", 0, QApplication::UnicodeUTF8));
-        linkstatuslabel->setText(QApplication::translate("connectDialog", "Disconnected", 0, QApplication::UnicodeUTF8));
-        connectButton->setText(QApplication::translate("connectDialog", "Connect", 0, QApplication::UnicodeUTF8));
+        ComOKBtn->setText(QApplication::translate("connectDialog", "OK", 0, QApplication::UnicodeUTF8));
         cancelButton->setText(QApplication::translate("connectDialog", "Cancel", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 

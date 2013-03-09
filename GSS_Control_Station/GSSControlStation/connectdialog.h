@@ -2,6 +2,7 @@
 #define CONNECTDIALOG_H
 
 #include <QDialog>
+//#include "mainwindow.h"
 
 namespace Ui {
 class connectDialog;
@@ -18,14 +19,14 @@ public:
 
     explicit connectDialog(QWidget *parent = 0);
     ~connectDialog();
-    
+    QextSerialPort *myport;
 private slots:
-    void connectButton_clicked();
+    void ComOKBtn_clicked();
 
 private:
     Ui::connectDialog *ui;
     QTimer *mytimer;
-    QextSerialPort *myport;
+
 };
 
 #endif // CONNECTDIALOG_H

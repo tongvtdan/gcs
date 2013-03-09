@@ -20,7 +20,7 @@
    <string>GSSControlStation</string>
   </property>
   <property name="windowIcon">
-   <iconset>
+   <iconset resource="gss_resources.qrc">
     <normaloff>:/files/images_icons/apps/globe.ico</normaloff>:/files/images_icons/apps/globe.ico</iconset>
   </property>
   <property name="styleSheet">
@@ -57,8 +57,8 @@
     <property name="title">
      <string>Communication</string>
     </property>
-    <addaction name="actionConnect"/>
-    <addaction name="actionDisconnect"/>
+    <addaction name="actionComSettings"/>
+    <addaction name="actionComOpenClose"/>
    </widget>
    <widget class="QMenu" name="menuPerspectives">
     <property name="title">
@@ -105,7 +105,7 @@
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionLoad_Settings">
    <property name="icon">
-    <iconset>
+    <iconset resource="gss_resources.qrc">
      <normaloff>:/files/images_icons/apps/download.ico</normaloff>:/files/images_icons/apps/download.ico</iconset>
    </property>
    <property name="text">
@@ -114,7 +114,7 @@
   </action>
   <action name="actionSave_Settings">
    <property name="icon">
-    <iconset>
+    <iconset resource="gss_resources.qrc">
      <normaloff>:/files/images_icons/apps/save.ico</normaloff>:/files/images_icons/apps/save.ico</iconset>
    </property>
    <property name="text">
@@ -123,25 +123,25 @@
   </action>
   <action name="actionExit">
    <property name="icon">
-    <iconset>
+    <iconset resource="gss_resources.qrc">
      <normaloff>:/files/images_icons/apps/button_cancel_256.ico</normaloff>:/files/images_icons/apps/button_cancel_256.ico</iconset>
    </property>
    <property name="text">
     <string>Exit</string>
    </property>
   </action>
-  <action name="actionConnect">
+  <action name="actionComSettings">
    <property name="icon">
-    <iconset>
+    <iconset resource="gss_resources.qrc">
      <normaloff>:/files/images_icons/apps/connect.ico</normaloff>:/files/images_icons/apps/connect.ico</iconset>
    </property>
    <property name="text">
-    <string>Connect</string>
+    <string>COM Settigs</string>
    </property>
   </action>
   <action name="actionOperator">
    <property name="icon">
-    <iconset>
+    <iconset resource="gss_resources.qrc">
      <normaloff>:/files/images_icons/apps/system-users.svg</normaloff>:/files/images_icons/apps/system-users.svg</iconset>
    </property>
    <property name="text">
@@ -150,7 +150,7 @@
   </action>
   <action name="actionEngineer">
    <property name="icon">
-    <iconset>
+    <iconset resource="gss_resources.qrc">
      <normaloff>:/files/images_icons/apps/engineer_avatar.ico</normaloff>:/files/images_icons/apps/engineer_avatar.ico</iconset>
    </property>
    <property name="text">
@@ -159,7 +159,7 @@
   </action>
   <action name="actionSystem_configuration">
    <property name="icon">
-    <iconset>
+    <iconset resource="gss_resources.qrc">
      <normaloff>:/files/images_icons/apps/preferences_system.ico</normaloff>:/files/images_icons/apps/preferences_system.ico</iconset>
    </property>
    <property name="text">
@@ -168,7 +168,7 @@
   </action>
   <action name="actionDebug_Console">
    <property name="icon">
-    <iconset>
+    <iconset resource="gss_resources.qrc">
      <normaloff>:/files/images_icons/apps/guake.ico</normaloff>:/files/images_icons/apps/guake.ico</iconset>
    </property>
    <property name="text">
@@ -187,24 +187,27 @@
   </action>
   <action name="actionAbout_GSSControlStation">
    <property name="icon">
-    <iconset>
+    <iconset resource="gss_resources.qrc">
      <normaloff>:/files/images_icons/apps/info_box_blue.ico</normaloff>:/files/images_icons/apps/info_box_blue.ico</iconset>
    </property>
    <property name="text">
     <string>About GSSControlStation</string>
    </property>
   </action>
-  <action name="actionDisconnect">
+  <action name="actionComOpenClose">
    <property name="icon">
-    <iconset>
-     <normaloff>:/files/images_icons/apps/disconnect.ico</normaloff>:/files/images_icons/apps/disconnect.ico</iconset>
+    <iconset resource="gss_resources.qrc">
+     <normaloff>:/files/images_icons/apps/disconnect.ico</normaloff>
+     <normalon>:/files/images_icons/apps/connect.ico</normalon>:/files/images_icons/apps/disconnect.ico</iconset>
    </property>
    <property name="text">
-    <string>Disconnect</string>
+    <string>Connect</string>
    </property>
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="gss_resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

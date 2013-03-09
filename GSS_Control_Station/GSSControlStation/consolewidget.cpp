@@ -2,6 +2,7 @@
 #include "ui_consolewidget.h"
 
 #include "connectdialog.h"
+#include "mainwindow.h"
 
 consolewidget::consolewidget(QWidget *parent) :
     QWidget(parent),
@@ -31,10 +32,10 @@ void consolewidget::on_ReadyRead()
     //            return;
     //        }
 
-    //    if (myport->bytesAvailable()) {
-    //        ui->receiTextEdit->moveCursor(QTextCursor::End);
-    //        //ui->receiTextEdit->insertPlainText(QString::fromLatin1(myport->readAll()));
-    //        ui->receiTextEdit->insertPlainText(QString::fromLatin1(myport->readLine()));
-    //    }
+//        if (my_connectDialog.myport->bytesAvailable()) {
+//            ui->receiTextEdit->moveCursor(QTextCursor::End);
+//            ui->receiTextEdit->insertPlainText(QString::fromLatin1(myport->readAll()));
+//            ui->receiTextEdit->insertPlainText(QString::fromLatin1(myport->readLine()));
+//        }
 }
 

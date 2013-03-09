@@ -60,10 +60,11 @@ connectDialog::connectDialog(QWidget *parent) :
     mytimer = new QTimer(this);
     mytimer->setInterval(10);
 
-    PortSettings myportsetting = {BAUD9600,DATA_8,PAR_NONE,STOP_1,FLOW_OFF,10};
-    myport = new QextSerialPort(ui->comportBox->currentText(),myportsetting,QextSerialPort::EventDriven);
+//    PortSettings myportsetting = {BAUD9600,DATA_8,PAR_NONE,STOP_1,FLOW_OFF,10};
+//    myport = new QextSerialPort(ui->comportBox->currentText(),myportsetting,QextSerialPort::EventDriven);
 
-    connect(ui->connectButton,SIGNAL(clicked()),SLOT(connectButton_clicked()));
+    connect(ui->ComOKBtn,SIGNAL(clicked()),SLOT(ComOKBtn_clicked()));
+
     //connect(ui->sendButton,SIGNAL(clicked()),SLOT(sendButton_clicked()));
     //connect(ui->cleartranButton,SIGNAL(clicked()),SLOT(cleartranButton_clicked()));
     //connect(ui->clearRecButton,SIGNAL(clicked()),SLOT(clearreceiButton_clicked()));
@@ -74,30 +75,31 @@ connectDialog::~connectDialog()
     delete ui;
 }
 
-void connectDialog::connectButton_clicked()
+void connectDialog::ComOKBtn_clicked()
 {
-    if (myport->isOpen()== false)
-    {
-        myport->setPortName(ui->comportBox->currentText());
-        myport->open(QIODevice::ReadWrite);
-        ui->connectButton->setText("Disconnect");
-        ui->linkstatuslabel->setText("Connected");
-    }
-    else
-    {
-        myport->close();
-        ui->connectButton->setText("Connect");
-        ui->linkstatuslabel->setText("Disconnected");
-    }
+//    if (myport->isOpen()== false)
+//    {
+//        myport->setPortName(ui->comportBox->currentText());
+//        myport->open(QIODevice::ReadWrite);
+//        ui->ComOKBtn->setText("Disconnect");
+//        ui->linkstatuslabel->setText("Connected");
+//    }
+//    else
+//    {
+//        myport->close();
+//        ui->ComOKBtn->setText("Connect");
+//        ui->linkstatuslabel->setText("Disconnected");
+//    }
 
-    if (myport->isOpen()) {
-        if (myport->queryMode() == QextSerialPort::EventDriven)
-            mytimer->start();
-    }
-    else {
-        mytimer->stop();
-    }
+//    if (myport->isOpen()) {
+//        if (myport->queryMode() == QextSerialPort::EventDriven)
+//            mytimer->start();
+//    }
+//    else {
+//        mytimer->stop();
+//    }
+    PortSettings myportsetting = {BAUD9600,DATA_8,PAR_NONE,STOP_1,FLOW_OFF,10};
+    myport = new QextSerialPort(ui->comportBox->currentText(),myportsetting,QextSerialPort::EventDriven);
+//    this->reject();
 }
-
-
 

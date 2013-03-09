@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created: Sat Mar 9 09:36:53 2013
+** Created: Sat Mar 9 15:51:56 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_MainWindow[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+       7,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -37,6 +37,7 @@ static const uint qt_meta_data_MainWindow[] = {
      105,   91,   11,   11, 0x08,
      138,   11,   11,   11, 0x08,
      169,   11,   11,   11, 0x08,
+     199,   11,   11,   11, 0x08,
 
        0        // eod
 };
@@ -47,7 +48,8 @@ static const char qt_meta_stringdata_MainWindow[] = {
     "reloadStylesheet()\0title,message\0"
     "showInfoMessage(QString,QString)\0"
     "actionDebugConsole_triggered()\0"
-    "actionConnect_triggered()\0"
+    "actionComSettings_triggered()\0"
+    "actionComOpenClose_triggered()\0"
 };
 
 void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -61,7 +63,8 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 2: _t->reloadStylesheet(); break;
         case 3: _t->showInfoMessage((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
         case 4: _t->actionDebugConsole_triggered(); break;
-        case 5: _t->actionConnect_triggered(); break;
+        case 5: _t->actionComSettings_triggered(); break;
+        case 6: _t->actionComOpenClose_triggered(); break;
         default: ;
         }
     }
@@ -99,9 +102,9 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 7;
     }
     return _id;
 }

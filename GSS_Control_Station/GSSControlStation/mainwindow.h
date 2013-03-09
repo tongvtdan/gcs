@@ -29,6 +29,8 @@ public:
         GSC_MAINWINDOW_STYLE_OUTDOOR
     };
 
+//    connectDialog *my_connectDialog;
+    QextSerialPort *m_port;
 protected:
     QPointer<QDockWidget> consoleDockWidget; // Debug consolse Dock widget
     QString styleFileName;
@@ -45,7 +47,10 @@ private slots:
 
     void actionDebugConsole_triggered();
 
-    void actionConnect_triggered();
+    void actionComSettings_triggered();
+
+
+    void actionComOpenClose_triggered();
 
 private:
     Ui::MainWindow *ui;
@@ -53,7 +58,7 @@ private:
     consolewidget *my_consolewidget;
     connectDialog *my_connectDialog;
 
-    QextSerialPort *myport;
+
     QTimer *mytimer;
 
     void createDockWindows(); // to create Dock Widget
