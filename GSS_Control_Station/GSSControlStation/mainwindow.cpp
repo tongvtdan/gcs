@@ -35,7 +35,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->mainToolBar->addAction(ui->actionOperator);
 
 
-    my_connectDialog = new connectDialog(this);
+    //my_connectDialog = new connectDialog(this);
 
     loadStyle(currentStyle);
 
