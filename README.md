@@ -1,8 +1,5 @@
-gss_controlStation
-==================
+== Giới thiệu về gcs ==
 
-Application to confirgure and setup GSS system
-Beta 1 Version
-Tools:
- - IDE: Qt Creator 2.5
- - Compiler: Qt 4.8
+gcs là từ viết tắt của GSS Control Station.
+Đây là ứng dụng được sử dụng trong dự án GSS-Hệ thống robot phun thuốc BVTV cho hoa.
+Ứng dụng là công cụ để vận hành từ xa(Remote control), thiết lập cấu hình thiết bị và sử dụng để kiểm tra, hỗ trợ trong lập trình điều khiển
