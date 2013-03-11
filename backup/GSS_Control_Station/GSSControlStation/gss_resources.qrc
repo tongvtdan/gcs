@@ -1,0 +1,29 @@
+<RCC>
+    <qresource prefix="/">
+        <file>files/images_icons/About.png</file>
+        <file>files/images_icons/Down.png</file>
+        <file>files/images_icons/Download.png</file>
+        <file>files/images_icons/Left.png</file>
+        <file>files/images_icons/PowerButton_Off.png</file>
+        <file>files/images_icons/PowerButton_On.png</file>
+        <file>files/images_icons/Right.png</file>
+        <file>files/images_icons/Selection.png</file>
+        <file>files/images_icons/settings.png</file>
+        <file>files/images_icons/Submit.png</file>
+        <file>files/images_icons/Up.png</file>
+        <file>files/images_icons/Upload.png</file>
+        <file>files/images_icons/apps/system-users.svg</file>
+        <file>files/images_icons/apps/utilities-system-monitor.svg</file>
+        <file>files/images_icons/apps/utilities-terminal.svg</file>
+        <file>files/images_icons/apps/engineer_avatar.ico</file>
+        <file>files/images_icons/apps/save.ico</file>
+        <file>files/images_icons/apps/download.ico</file>
+        <file>files/images_icons/apps/button_cancel_256.ico</file>
+        <file>files/images_icons/apps/globe.ico</file>
+        <file>files/images_icons/apps/preferences_system.ico</file>
+        <file>files/images_icons/apps/guake.ico</file>
+        <file>files/images_icons/apps/info_box_blue.ico</file>
+        <file>files/images_icons/apps/disconnect.ico</file>
+        <file>files/images_icons/apps/connect.ico</file>
+    </qresource>
+</RCC>
