@@ -6,6 +6,8 @@
 
 QT       += core gui
 
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
 TARGET = GSSControlStation
 TEMPLATE = app
 include (libs/thirdParty/qextserialport/src/qextserialport.pri)

@@ -1,0 +1,16 @@
+INPUT(
+./release\qextserialport.o
+./release\qextserialenumerator.o
+./release\qextserialport_win.o
+./release\qextserialenumerator_win.o
+./release\main.o
+./release\mainwindow.o
+./release\aboutdialog.o
+./release\consolewidget.o
+./release\connectdialog.o
+./release\qrc_gss_resources.o
+./release\moc_mainwindow.o
+./release\moc_aboutdialog.o
+./release\moc_consolewidget.o
+./release\moc_connectdialog.o
+);
