@@ -1,0 +1,2 @@
+Version 0.1 (Ngày 11-03-2013):
+ - Khởi tạo version đầu tiên
