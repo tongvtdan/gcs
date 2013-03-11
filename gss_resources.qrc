@@ -28,7 +28,5 @@
         <file>files/styles/style-indoor.css</file>
         <file>files/styles/style-outdoor.css</file>
     </qresource>
-    <qresource prefix="/general">
-        <file>files/styles/Vera.ttf</file>
-    </qresource>
+    <qresource prefix="/general"/>
 </RCC>

@@ -40,12 +40,12 @@ void MainWindow::loadStyle(MainWindow::GCS_MAINWINDOW_STYLE style)
     }
     break;
     case GCS_MAINWINDOW_STYLE_INDOOR:
-    qApp->setStyle("plastique");
+    qApp->setStyle("fusion");
         styleFileName = ":files/styles/style-indoor.css";
         reloadStylesheet();
         break;
     case GCS_MAINWINDOW_STYLE_OUTDOOR:
-    qApp->setStyle("plastique");
+    qApp->setStyle("fusion");
         styleFileName = ":files/styles/style-outdoor.css";
         reloadStylesheet();
         break;
