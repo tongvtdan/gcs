@@ -25,5 +25,10 @@
         <file>files/images_icons/apps/info_box_blue.ico</file>
         <file>files/images_icons/apps/disconnect.ico</file>
         <file>files/images_icons/apps/connect.ico</file>
+        <file>files/styles/style-indoor.css</file>
+        <file>files/styles/style-outdoor.css</file>
+    </qresource>
+    <qresource prefix="/general">
+        <file>files/styles/Vera.ttf</file>
     </qresource>
 </RCC>

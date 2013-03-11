@@ -23,3 +23,6 @@ FORMS    += src/ui/mainwindow.ui
 OTHER_FILES += \
     ChangeLog.txt \
     README.md
+
+RESOURCES += \
+    gss_resources.qrc
