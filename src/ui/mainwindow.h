@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
+#include "SerialConfigurationWindow.h"
 namespace Ui {
 class MainWindow;
 }
@@ -31,8 +31,26 @@ public slots:
     void reloadStylesheet();
     /** @brief Shows an info message as popup or as widget */
     void showInfoMessage(const QString& title, const QString& message);
+    /** @brief Get current visual style */
+    int getStyle()
+    {
+        return currentStyle;
+    }
+    /** @brief Let the user select the CSS style sheet */
+    void selectStylesheet();
+    /** @brief Switch to native application style */
+    void loadNativeStyle();
+    /** @brief Switch to indoor mission style */
+    void loadIndoorStyle();
+    /** @brief Switch to outdoor mission style */
+    void loadOutdoorStyle();
+
+private Q_SLOTS:
+    void onComSettingTriggered();
+
 private:
     Ui::MainWindow *ui;
+    SerialSettingsWindow *m_SerialConfigWindow;
 };
 
 #endif // MAINWINDOW_H

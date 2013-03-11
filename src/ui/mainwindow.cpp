@@ -2,6 +2,7 @@
 #include <QMessageBox>
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "SerialConfigurationWindow.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -13,9 +14,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     ui->mainToolBar->addAction(ui->actionEngineer);
     ui->mainToolBar->addAction(ui->actionOperator);
-    //    currentStyle = GCS_MAINWINDOW_STYLE_INDOOR;
-    //    styleFileName = QCoreApplication::applicationDirPath() + "styles/style-indoor.css";
+    /** @brief Create ComSerialConfigurationWindow dialog*/
+    m_SerialConfigWindow = new SerialSettingsWindow(this);
+
     loadStyle(currentStyle);
+
+    connect(ui->actionCom_Settings,SIGNAL(triggered()),SLOT(onComSettingTriggered()));
 }
 
 MainWindow::~MainWindow()
@@ -93,3 +97,26 @@ void MainWindow::showInfoMessage(const QString &title, const QString &message)
     msgBox.exec();
 }
 
+void MainWindow::selectStylesheet()
+{
+}
+
+void MainWindow::loadNativeStyle()
+{
+    loadStyle(GCS_MAINWINDOW_STYLE_NATIVE);
+}
+
+void MainWindow::loadIndoorStyle()
+{
+    loadStyle(GCS_MAINWINDOW_STYLE_INDOOR);
+}
+
+void MainWindow::loadOutdoorStyle()
+{
+    loadStyle(GCS_MAINWINDOW_STYLE_OUTDOOR);
+}
+
+void MainWindow::onComSettingTriggered()
+{
+    m_SerialConfigWindow->show();
+}
