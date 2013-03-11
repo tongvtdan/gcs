@@ -7,7 +7,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),
     currentStyle(GCS_MAINWINDOW_STYLE_INDOOR),
-    styleFileName(QCoreApplication::applicationDirPath() + "styles/style-indoor.css")
+    styleFileName(QCoreApplication::applicationDirPath() + "style-indoor.css")
 
 {
     ui->setupUi(this);
@@ -35,19 +35,17 @@ void MainWindow::loadStyle(MainWindow::GCS_MAINWINDOW_STYLE style)
         // Only if a style was set, remove it.
         if (style != currentStyle) {
             qApp->setStyleSheet("");
-
-            showInfoMessage(tr("Please restart GSS CS"),
-                            tr("Please restart GSS CS to switch to fully native look and feel. Currently you have loaded Qt's plastique style."));
+            showInfoMessage(tr("Please restart QGroundControl"), tr("Please restart QGroundControl to switch to fully native look and feel. Currently you have loaded Qt's plastique style."));
         }
     }
-        break;
+    break;
     case GCS_MAINWINDOW_STYLE_INDOOR:
-        qApp->setStyle("plastique");
+    qApp->setStyle("plastique");
         styleFileName = ":files/styles/style-indoor.css";
         reloadStylesheet();
         break;
     case GCS_MAINWINDOW_STYLE_OUTDOOR:
-        qApp->setStyle("plastique");
+    qApp->setStyle("plastique");
         styleFileName = ":files/styles/style-outdoor.css";
         reloadStylesheet();
         break;
@@ -72,8 +70,13 @@ void MainWindow::reloadStylesheet()
     }
     else
     {
-        showInfoMessage(tr("GSS Control Station did lot load a new style"),
-                        tr("Stylesheet file %1 was not readable").arg(styleFileName));
+        QMessageBox msgBox;
+        msgBox.setIcon(QMessageBox::Information);
+        msgBox.setText(tr("QGroundControl did lot load a new style"));
+        msgBox.setInformativeText(tr("Stylesheet file %1 was not readable").arg(styleFileName));
+        msgBox.setStandardButtons(QMessageBox::Ok);
+        msgBox.setDefaultButton(QMessageBox::Ok);
+        msgBox.exec();
     }
     delete styleSheet;
 }

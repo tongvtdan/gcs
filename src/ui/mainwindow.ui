@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>GSS Control Station</string>
+   <string>GSS Control Station - Alpha-0.1</string>
   </property>
   <property name="windowIcon">
    <iconset resource="../../gss_resources.qrc">
@@ -88,13 +88,17 @@
   <action name="actionEngineer">
    <property name="icon">
     <iconset resource="../../gss_resources.qrc">
-     <normaloff>:/files/images_icons/apps/engineer_avatar.ico</normaloff>:/files/images_icons/apps/engineer_avatar.ico</iconset>
+     <normaloff>:/files/images_icons/apps/preferences_system.ico</normaloff>:/files/images_icons/apps/preferences_system.ico</iconset>
    </property>
    <property name="text">
     <string>Engineer</string>
    </property>
   </action>
   <action name="actionOperator">
+   <property name="icon">
+    <iconset resource="../../gss_resources.qrc">
+     <normaloff>:/files/images_icons/apps/engineer_avatar.ico</normaloff>:/files/images_icons/apps/engineer_avatar.ico</iconset>
+   </property>
    <property name="text">
     <string>Operator</string>
    </property>
