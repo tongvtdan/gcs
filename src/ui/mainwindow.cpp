@@ -29,6 +29,8 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->actionCom_Settings,SIGNAL(triggered()),SLOT(onComSettingTriggered()));
     connect(ui->actionConnect,SIGNAL(triggered()),SLOT(onComOpenCloseTriggered()));
     connect(ui->comOpenCloseButton,SIGNAL(clicked()),SLOT(comPortOpenCloseButtonClick()));
+    connect(m_SerialConfigWindow->SerialSettingsWindow::port,SIGNAL(readyRead()),SLOT(onSerialDataReady()));
+
 }
 
 MainWindow::~MainWindow()
@@ -141,6 +143,16 @@ void MainWindow::comPortOpenCloseButtonClick()
     ui->comPortStatusLued->turnOn(m_SerialConfigWindow->SerialSettingsWindow::port->isOpen());
 }
 
+void MainWindow::onSerialDataReady()
+{
+    if(m_SerialConfigWindow->SerialSettingsWindow::port->bytesAvailable())
+    {
+        ui->receiveText->moveCursor(QTextCursor::End);
+        ui->receiveText->insertPlainText(QString::fromLatin1(m_SerialConfigWindow->SerialSettingsWindow::port->readAll()));
+    }
+
+}
+
 void MainWindow::onComSettingTriggered()
 {
     m_SerialConfigWindow->show();
@@ -161,4 +173,10 @@ void MainWindow::onComOpenCloseTriggered()
       ui->actionConnect->setText("Close");
   }
 
+}
+
+void MainWindow::onSendButtonClick()
+{
+    if(m_SerialConfigWindow->SerialSettingsWindow::port->isOpen() && !ui->sendText->toPlainText().isEmpty())
+      m_SerialConfigWindow->SerialSettingsWindow::port->write(ui->sendText->toPlainText().toLatin1());
 }
