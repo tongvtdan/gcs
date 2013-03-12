@@ -3,12 +3,12 @@
 
 DebugConsole::DebugConsole(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::DebugConsole)
+    debug_ui(new Ui::DebugConsole)
 {
-    ui->setupUi(this);
+    debug_ui->setupUi(this);
 }
 
 DebugConsole::~DebugConsole()
 {
-    delete ui;
+    delete debug_ui;
 }

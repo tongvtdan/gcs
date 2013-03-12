@@ -1,11 +1,14 @@
 #include <QFile>        // for file operation
 #include <QMessageBox>
+#include <QDockWidget>
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "SerialConfigurationWindow.h"
 #include "ui_SerialConfigurationWindow.h"
 #include "qextserialport.h"
 //#include "qextserialenumerator.h"
+#include "src/ui/DebugConsole.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -26,8 +29,11 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->actionConnect,SIGNAL(triggered()),SLOT(onComOpenCloseTriggered()));
     connect(ui->comOpenCloseButton,SIGNAL(clicked()),SLOT(comPortOpenCloseButtonClick()));
     connect(m_SerialConfigWindow->SerialSettingsWindow::port,SIGNAL(readyRead()),SLOT(onSerialDataReady()));
+    connect(ui->actionDebug_console,SIGNAL(triggered()),SLOT(onDebugConsoleTriggered()));
+
     connect(ui->sendButton,SIGNAL(clicked()),SLOT(onSendButtonClick()));
 
+    createDockWidgets();
 }
 
 MainWindow::~MainWindow()
@@ -137,7 +143,7 @@ void MainWindow::comPortOpenCloseButtonClick()
         m_SerialConfigWindow->SerialSettingsWindow::port->open(QIODevice::ReadWrite);
         ui->comOpenCloseButton->setText("Close");
     }
-    ui->comPortStatusLued->turnOn(m_SerialConfigWindow->SerialSettingsWindow::port->isOpen());
+//    ui->comPortStatusLued->turnOn(m_SerialConfigWindow->SerialSettingsWindow::port->isOpen());
 }
 
 void MainWindow::onSerialDataReady()
@@ -178,4 +184,22 @@ void MainWindow::onSendButtonClick()
     {
       m_SerialConfigWindow->SerialSettingsWindow::port->write(ui->sendText->toPlainText().toLatin1());
     }
+}
+
+void MainWindow::onDebugConsoleTriggered()
+{
+    createDockWidgets();
+}
+
+void MainWindow::createDockWidgets()
+{
+    /** @brief Create Debug Console widget */
+    consoleDockWidget = new QDockWidget(tr("Communication Console"), this);
+    consoleDockWidget->setWidget( new DebugConsole(this) );
+    consoleDockWidget->setObjectName("DEBUGCONSOLE_DOCKWIDGET");
+
+    DebugConsole *debug = dynamic_cast<DebugConsole*>(consoleDockWidget->widget());
+    debug->show();
+    //connect(mavlinkDecoder, SIGNAL(textMessageReceived(int, int, int, const QString)), debugConsole, SLOT(receiveTextMessage(int, int, int, const QString)));
+    addDockWidget(Qt::BottomDockWidgetArea,consoleDockWidget);
 }

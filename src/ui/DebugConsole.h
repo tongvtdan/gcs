@@ -15,8 +15,9 @@ public:
     explicit DebugConsole(QWidget *parent = 0);
     ~DebugConsole();
     
+    Ui::DebugConsole *debug_ui;
 private:
-    Ui::DebugConsole *ui;
+//    Ui::DebugConsole *debug_ui;
 };
 
 #endif // DEBUGCONSOLE_H

@@ -2,7 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QPointer>
+
 #include "SerialConfigurationWindow.h"
+
 namespace Ui {
 class MainWindow;
 }
@@ -24,6 +27,8 @@ public:
 protected:
     QString styleFileName;
     GCS_MAINWINDOW_STYLE currentStyle;
+    QPointer<QDockWidget> consoleDockWidget; // Debug consolse Dock widget
+
 public slots:
     /** @brief Load a specific style */
     void loadStyle(GCS_MAINWINDOW_STYLE style);
@@ -51,6 +56,7 @@ private Q_SLOTS:
     void onComSettingTriggered();
     void onComOpenCloseTriggered();
     void onSendButtonClick();
+    void onDebugConsoleTriggered();
 
 
 
@@ -58,6 +64,8 @@ private:
     Ui::MainWindow *ui;
     SerialSettingsWindow *m_SerialConfigWindow;
     QextSerialPort *m_port;
+
+    void createDockWidgets();
 };
 
 #endif // MAINWINDOW_H

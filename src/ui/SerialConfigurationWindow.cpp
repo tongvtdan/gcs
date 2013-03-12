@@ -4,6 +4,8 @@
 #include "qextserialenumerator.h"
 #include "SerialConfigurationWindow.h"
 #include "ui_SerialConfigurationWindow.h"
+//#include "DebugConsole.h"
+
 
 #include <QtCore>
 SerialSettingsWindow::SerialSettingsWindow(QWidget *parent) :
@@ -58,6 +60,9 @@ SerialSettingsWindow::SerialSettingsWindow(QWidget *parent) :
     enumerator = new QextSerialEnumerator(this);
     enumerator->setUpNotifications();
 
+    m_debugConsole = new DebugConsole(this);
+
+
     connect(port_ui->baudRateBox, SIGNAL(currentIndexChanged(int)), SLOT(onBaudRateChanged(int)));
     connect(port_ui->parityBox, SIGNAL(currentIndexChanged(int)), SLOT(onParityChanged(int)));
     connect(port_ui->dataBitsBox, SIGNAL(currentIndexChanged(int)), SLOT(onDataBitsChanged(int)));
@@ -65,10 +70,8 @@ SerialSettingsWindow::SerialSettingsWindow(QWidget *parent) :
     connect(port_ui->queryModeBox, SIGNAL(currentIndexChanged(int)), SLOT(onQueryModeChanged(int)));
     connect(port_ui->timeoutBox, SIGNAL(valueChanged(int)), SLOT(onTimeoutChanged(int)));
     connect(port_ui->portBox, SIGNAL(editTextChanged(QString)), SLOT(onPortNameChanged(QString)));
-    connect(port_ui->okButton, SIGNAL(clicked()), SLOT(onOkButtonClicked()));
-    connect(port_ui->cancelButton, SIGNAL(clicked()), SLOT(onCancelButtonClicked()));
-//    connect(timer, SIGNAL(timeout()), SLOT(onReadyRead()));
-//    connect(port, SIGNAL(readyRead()), SLOT(onReadyRead()));
+    connect(port_ui->connectButton, SIGNAL(clicked()), SLOT(onConnectButtonClicked()));
+    connect(port_ui->closeButton, SIGNAL(clicked()), SLOT(onCloseButtonClicked()));
 
     connect(enumerator, SIGNAL(deviceDiscovered(QextPortInfo)), SLOT(onPortAddedOrRemoved()));
     connect(enumerator, SIGNAL(deviceRemoved(QextPortInfo)), SLOT(onPortAddedOrRemoved()));
@@ -131,24 +134,27 @@ void SerialSettingsWindow::onTimeoutChanged(int val)
     port->setTimeout(val);
 }
 
-void SerialSettingsWindow::onCancelButtonClicked()
+void SerialSettingsWindow::onCloseButtonClicked()
 {
+    this->reject();
 }
 
-void SerialSettingsWindow::onOkButtonClicked()
+void SerialSettingsWindow::onConnectButtonClicked()
 {
     if(!port->isOpen())
     {
         port->setPortName(port_ui->portBox->currentText());
         port->open(QIODevice::ReadWrite);
-
+        port_ui->connectButton->setText("Disconnect");
+        port_ui->connectStatusLabel->setText("Connected");
     }
     else
     {
         port->close();
+        port_ui->connectButton->setText("Connect");
+        port_ui->connectStatusLabel->setText("Disconnected");
     }
     port_ui->led->turnOn(port->isOpen());
-//    this->reject();
 }
 
 void SerialSettingsWindow::onReadyRead()

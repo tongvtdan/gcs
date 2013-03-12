@@ -2,6 +2,7 @@
 #define SERIALCONFIGURATIONWINDOW_H
 
 #include <QDialog>
+#include "DebugConsole.h"
 
 namespace Ui {
 class SerialSettingsWindow;
@@ -21,6 +22,7 @@ public:
     QextSerialPort *port;
     QextSerialEnumerator *enumerator;
     Ui::SerialSettingsWindow *port_ui;
+
 protected:
     void changeEvent(QEvent *e);
 private Q_SLOTS:
@@ -31,18 +33,20 @@ private Q_SLOTS:
     void onStopBitsChanged(int idx);
     void onQueryModeChanged(int idx);
     void onTimeoutChanged(int val);
-    void onCancelButtonClicked();
-    void onOkButtonClicked();
+    void onCloseButtonClicked();
+    void onConnectButtonClicked();
     void onReadyRead();
 
     void onPortAddedOrRemoved();
 
 private:
+    DebugConsole *m_debugConsole;
 //    Ui::SerialSettingsWindow *port_ui;
 
 //    QTimer *timer;
 //    QextSerialPort *port;
 //    QextSerialEnumerator *enumerator;
+
 
 };
 
