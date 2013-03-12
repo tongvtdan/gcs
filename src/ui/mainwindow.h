@@ -44,10 +44,14 @@ public slots:
     void loadIndoorStyle();
     /** @brief Switch to outdoor mission style */
     void loadOutdoorStyle();
+
     void comPortOpenCloseButtonClick();
+    void onSerialDataReady();
 private Q_SLOTS:
     void onComSettingTriggered();
     void onComOpenCloseTriggered();
+    void onSendButtonClick();
+
 
 
 private:

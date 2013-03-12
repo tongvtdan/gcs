@@ -18,17 +18,16 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->mainToolBar->addAction(ui->actionEngineer);
     ui->mainToolBar->addAction(ui->actionOperator);
     /** @brief Create ComSerialConfigurationWindow dialog*/
-    m_SerialConfigWindow = new SerialSettingsWindow(this);
-    //! [1]
-//    PortSettings settings = {BAUD9600, DATA_8, PAR_NONE, STOP_1, FLOW_OFF, 10};
-//    m_port = new QextSerialPort(m_SerialConfigWindow->port_ui->portBox->currentText(), settings, QextSerialPort::EventDriven);
-    //! [1]
+    m_SerialConfigWindow = new SerialSettingsWindow(this); 
 
     loadStyle(currentStyle);
 
     connect(ui->actionCom_Settings,SIGNAL(triggered()),SLOT(onComSettingTriggered()));
     connect(ui->actionConnect,SIGNAL(triggered()),SLOT(onComOpenCloseTriggered()));
     connect(ui->comOpenCloseButton,SIGNAL(clicked()),SLOT(comPortOpenCloseButtonClick()));
+    connect(m_SerialConfigWindow->SerialSettingsWindow::port,SIGNAL(readyRead()),SLOT(onSerialDataReady()));
+    connect(ui->sendButton,SIGNAL(clicked()),SLOT(onSendButtonClick()));
+
 }
 
 MainWindow::~MainWindow()
@@ -141,6 +140,16 @@ void MainWindow::comPortOpenCloseButtonClick()
     ui->comPortStatusLued->turnOn(m_SerialConfigWindow->SerialSettingsWindow::port->isOpen());
 }
 
+void MainWindow::onSerialDataReady()
+{
+    if(m_SerialConfigWindow->SerialSettingsWindow::port->bytesAvailable())
+    {
+        ui->receiveText->moveCursor(QTextCursor::End);
+        ui->receiveText->insertPlainText(QString::fromLatin1(m_SerialConfigWindow->SerialSettingsWindow::port->readAll()));
+    }
+
+}
+
 void MainWindow::onComSettingTriggered()
 {
     m_SerialConfigWindow->show();
@@ -161,4 +170,12 @@ void MainWindow::onComOpenCloseTriggered()
       ui->actionConnect->setText("Close");
   }
 
+}
+
+void MainWindow::onSendButtonClick()
+{
+    if(m_SerialConfigWindow->SerialSettingsWindow::port->isOpen() && !ui->sendText->toPlainText().isEmpty())
+    {
+      m_SerialConfigWindow->SerialSettingsWindow::port->write(ui->sendText->toPlainText().toLatin1());
+    }
 }

@@ -67,8 +67,8 @@ SerialSettingsWindow::SerialSettingsWindow(QWidget *parent) :
     connect(port_ui->portBox, SIGNAL(editTextChanged(QString)), SLOT(onPortNameChanged(QString)));
     connect(port_ui->okButton, SIGNAL(clicked()), SLOT(onOkButtonClicked()));
     connect(port_ui->cancelButton, SIGNAL(clicked()), SLOT(onCancelButtonClicked()));
-    connect(timer, SIGNAL(timeout()), SLOT(onReadyRead()));
-    connect(port, SIGNAL(readyRead()), SLOT(onReadyRead()));
+//    connect(timer, SIGNAL(timeout()), SLOT(onReadyRead()));
+//    connect(port, SIGNAL(readyRead()), SLOT(onReadyRead()));
 
     connect(enumerator, SIGNAL(deviceDiscovered(QextPortInfo)), SLOT(onPortAddedOrRemoved()));
     connect(enumerator, SIGNAL(deviceRemoved(QextPortInfo)), SLOT(onPortAddedOrRemoved()));
