@@ -17,7 +17,10 @@ class SerialSettingsWindow : public QDialog
 public:
     explicit SerialSettingsWindow(QWidget *parent = 0);
     ~SerialSettingsWindow();
-
+    QTimer *timer;
+    QextSerialPort *port;
+    QextSerialEnumerator *enumerator;
+    Ui::SerialSettingsWindow *port_ui;
 protected:
     void changeEvent(QEvent *e);
 private Q_SLOTS:
@@ -35,11 +38,11 @@ private Q_SLOTS:
     void onPortAddedOrRemoved();
 
 private:
-    Ui::SerialSettingsWindow *ui;
+//    Ui::SerialSettingsWindow *port_ui;
 
-    QTimer *timer;
-    QextSerialPort *port;
-    QextSerialEnumerator *enumerator;
+//    QTimer *timer;
+//    QextSerialPort *port;
+//    QextSerialEnumerator *enumerator;
 
 };
 

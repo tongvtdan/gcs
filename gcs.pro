@@ -15,10 +15,12 @@ include (libs/thirdParty/qextserialport/src/qextserialport.pri)
 
 SOURCES += src/main.cpp\
         src/ui/mainwindow.cpp \
-    src/ui/SerialConfigurationWindow.cpp
+    src/ui/SerialConfigurationWindow.cpp \
+    src/common/hled.cpp
 
 HEADERS  += src/ui/mainwindow.h \
-    src/ui/SerialConfigurationWindow.h
+    src/ui/SerialConfigurationWindow.h \
+    src/common/hled.h
 
 FORMS    += src/ui/mainwindow.ui \
     src/ui/SerialConfigurationWindow.ui

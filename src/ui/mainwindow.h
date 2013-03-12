@@ -44,13 +44,16 @@ public slots:
     void loadIndoorStyle();
     /** @brief Switch to outdoor mission style */
     void loadOutdoorStyle();
-
+    void comPortOpenCloseButtonClick();
 private Q_SLOTS:
     void onComSettingTriggered();
+    void onComOpenCloseTriggered();
+
 
 private:
     Ui::MainWindow *ui;
     SerialSettingsWindow *m_SerialConfigWindow;
+    QextSerialPort *m_port;
 };
 
 #endif // MAINWINDOW_H
