@@ -12,9 +12,6 @@
         <file>files/images_icons/Submit.png</file>
         <file>files/images_icons/Up.png</file>
         <file>files/images_icons/Upload.png</file>
-        <file>files/images_icons/apps/system-users.svg</file>
-        <file>files/images_icons/apps/utilities-system-monitor.svg</file>
-        <file>files/images_icons/apps/utilities-terminal.svg</file>
         <file>files/images_icons/apps/engineer_avatar.ico</file>
         <file>files/images_icons/apps/save.ico</file>
         <file>files/images_icons/apps/download.ico</file>
@@ -27,6 +24,14 @@
         <file>files/images_icons/apps/connect.ico</file>
         <file>files/styles/style-indoor.css</file>
         <file>files/styles/style-outdoor.css</file>
+        <file>files/images_icons/apps/system-users.png</file>
+        <file>files/images_icons/apps/ultilities-terminal.png</file>
+        <file>files/images_icons/apps/utilities-system-monitor.png</file>
+        <file>files/images_icons/apps/help-browser.png</file>
+        <file>files/images_icons/apps/process-stop.png</file>
+        <file>files/images_icons/apps/applications-system.png</file>
     </qresource>
-    <qresource prefix="/general"/>
+    <qresource prefix="/general">
+        <file>files/styles/Vera.ttf</file>
+    </qresource>
 </RCC>

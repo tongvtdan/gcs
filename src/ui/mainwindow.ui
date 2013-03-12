@@ -106,7 +106,7 @@
   <action name="actionSystem_Config">
    <property name="icon">
     <iconset resource="../../gss_resources.qrc">
-     <normaloff>:/files/images_icons/apps/preferences_system.ico</normaloff>:/files/images_icons/apps/preferences_system.ico</iconset>
+     <normaloff>:/files/images_icons/apps/applications-system.png</normaloff>:/files/images_icons/apps/applications-system.png</iconset>
    </property>
    <property name="text">
     <string>System Config</string>
@@ -134,13 +134,17 @@
   <action name="actionDebug_console">
    <property name="icon">
     <iconset resource="../../gss_resources.qrc">
-     <normaloff>:/files/images_icons/apps/guake.ico</normaloff>:/files/images_icons/apps/guake.ico</iconset>
+     <normaloff>:/files/images_icons/apps/ultilities-terminal.png</normaloff>:/files/images_icons/apps/ultilities-terminal.png</iconset>
    </property>
    <property name="text">
     <string>Debug console</string>
    </property>
   </action>
   <action name="actionParameters_Monitors">
+   <property name="icon">
+    <iconset resource="../../gss_resources.qrc">
+     <normaloff>:/files/images_icons/apps/utilities-system-monitor.png</normaloff>:/files/images_icons/apps/utilities-system-monitor.png</iconset>
+   </property>
    <property name="text">
     <string>Parameters Monitors</string>
    </property>
@@ -153,13 +157,17 @@
   <action name="actionAbout_GCS">
    <property name="icon">
     <iconset resource="../../gss_resources.qrc">
-     <normaloff>:/files/images_icons/apps/info_box_blue.ico</normaloff>:/files/images_icons/apps/info_box_blue.ico</iconset>
+     <normaloff>:/files/images_icons/apps/help-browser.png</normaloff>:/files/images_icons/apps/help-browser.png</iconset>
    </property>
    <property name="text">
     <string>About GCS</string>
    </property>
   </action>
   <action name="actionContact">
+   <property name="icon">
+    <iconset resource="../../gss_resources.qrc">
+     <normaloff>:/files/images_icons/apps/info_box_blue.ico</normaloff>:/files/images_icons/apps/info_box_blue.ico</iconset>
+   </property>
    <property name="text">
     <string>Contact</string>
    </property>
@@ -176,7 +184,7 @@
   <action name="actionExit">
    <property name="icon">
     <iconset resource="../../gss_resources.qrc">
-     <normaloff>:/files/images_icons/apps/button_cancel_256.ico</normaloff>:/files/images_icons/apps/button_cancel_256.ico</iconset>
+     <normaloff>:/files/images_icons/apps/process-stop.png</normaloff>:/files/images_icons/apps/process-stop.png</iconset>
    </property>
    <property name="text">
     <string>Exit</string>
