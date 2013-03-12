@@ -18,11 +18,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->mainToolBar->addAction(ui->actionEngineer);
     ui->mainToolBar->addAction(ui->actionOperator);
     /** @brief Create ComSerialConfigurationWindow dialog*/
-    m_SerialConfigWindow = new SerialSettingsWindow(this);
-    //! [1]
-//    PortSettings settings = {BAUD9600, DATA_8, PAR_NONE, STOP_1, FLOW_OFF, 10};
-//    m_port = new QextSerialPort(m_SerialConfigWindow->port_ui->portBox->currentText(), settings, QextSerialPort::EventDriven);
-    //! [1]
+    m_SerialConfigWindow = new SerialSettingsWindow(this); 
 
     loadStyle(currentStyle);
 
@@ -30,6 +26,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->actionConnect,SIGNAL(triggered()),SLOT(onComOpenCloseTriggered()));
     connect(ui->comOpenCloseButton,SIGNAL(clicked()),SLOT(comPortOpenCloseButtonClick()));
     connect(m_SerialConfigWindow->SerialSettingsWindow::port,SIGNAL(readyRead()),SLOT(onSerialDataReady()));
+    connect(ui->sendButton,SIGNAL(clicked()),SLOT(onSendButtonClick()));
 
 }
 
@@ -178,5 +175,7 @@ void MainWindow::onComOpenCloseTriggered()
 void MainWindow::onSendButtonClick()
 {
     if(m_SerialConfigWindow->SerialSettingsWindow::port->isOpen() && !ui->sendText->toPlainText().isEmpty())
+    {
       m_SerialConfigWindow->SerialSettingsWindow::port->write(ui->sendText->toPlainText().toLatin1());
+    }
 }
