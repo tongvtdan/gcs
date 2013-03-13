@@ -8,7 +8,7 @@
      <key>CFBundleIdentifier</key>
      <string>ch.ethz.pixhawk.groundstation</string>
      <key>CFBundleVersion</key>
-     <string>ProjectNumber</string>
+     <string>GSS01</string>
      <key>DocSetFeedName</key>
      <string>Doxygen generated docs</string>
      <key>DocSetPublisherIdentifier</key>
