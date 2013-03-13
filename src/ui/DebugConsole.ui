@@ -1,114 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>DebugConsole</class>
- <widget class="QDialog" name="DebugConsole">
+ <widget class="QWidget" name="DebugConsole">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>480</width>
-    <height>400</height>
+    <width>518</width>
+    <height>240</height>
    </rect>
   </property>
-  <property name="windowTitle">
-   <string>Dialog</string>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>200</height>
+   </size>
   </property>
-  <layout class="QGridLayout" name="gridLayout_2">
-   <item row="0" column="0">
-    <layout class="QGridLayout" name="gridLayout">
-     <item row="0" column="0">
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <item>
-        <widget class="QPlainTextEdit" name="receiveText">
-         <property name="minimumSize">
-          <size>
-           <width>300</width>
-           <height>50</height>
-          </size>
-         </property>
-         <property name="tabStopWidth">
-          <number>60</number>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="sentText">
-         <property name="text">
-          <string>Enter data/text below to send</string>
-         </property>
-         <property name="readOnly">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="sendText">
-         <property name="minimumSize">
-          <size>
-           <width>80</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="toolTip">
-          <string>Type the bytes to send here, use 0xAA format for HEX (Check HEX checkbox above)</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item row="1" column="0">
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QPushButton" name="transmitButton">
-         <property name="toolTip">
-          <string>Send the ASCII text or HEX values over the link</string>
-         </property>
-         <property name="text">
-          <string>Send</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>:/files/images/devices/network-wireless.svg</normaloff>:/files/images/devices/network-wireless.svg</iconset>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="clearButton">
-         <property name="text">
-          <string>Clear</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="connectButton">
-         <property name="text">
-          <string>Disconn.</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-    </layout>
-   </item>
-  </layout>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>clearButton</sender>
-   <signal>clicked()</signal>
-   <receiver>receiveText</receiver>
-   <slot>clear()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>281</x>
-     <y>376</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>242</x>
-     <y>260</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

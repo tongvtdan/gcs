@@ -4,8 +4,8 @@
 #include <QMainWindow>
 #include <QPointer>
 
-#include "SerialConfigurationWindow.h"
-
+#include "SerialSetting.h"
+#include "qextserialport.h"
 namespace Ui {
 class MainWindow;
 }
@@ -13,7 +13,7 @@ class MainWindow;
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
-    
+
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
@@ -24,10 +24,27 @@ public:
             GCS_MAINWINDOW_STYLE_INDOOR,
             GCS_MAINWINDOW_STYLE_OUTDOOR
         };
+
+    enum GCS_VIEW_SECTIONS
+    {
+        VIEW_ENGINEER,
+        VIEW_OPERATOR,
+        VIEW_FIRMWAREUPDATE,
+        VIEW_UNCONNECTED,    ///< View in unconnected mode, when no GSS System is available
+        VIEW_FULL            ///< All widgets shown at once
+    };
 protected:
-    QString styleFileName;
+
     GCS_MAINWINDOW_STYLE currentStyle;
+    /** @brief Keeps track of the current view */
+    GCS_VIEW_SECTIONS currentView;
+
+    QString styleFileName;
+
     QPointer<QDockWidget> consoleDockWidget; // Debug consolse Dock widget
+    QPointer<QDockWidget> serialDockWidget;
+
+    void loadGcsViewState();
 
 public slots:
     /** @brief Load a specific style */
@@ -50,6 +67,16 @@ public slots:
     /** @brief Switch to outdoor mission style */
     void loadOutdoorStyle();
 
+    /** @brief Load default view when no GSS System is connected */
+    void loadGcsUnconnectedView();
+    /** @brief Load view for engineer */
+    void loadGcsEngineerView();
+    /** @brief Load view for operator */
+    void loadGcsOperatorView();
+    /** @brief Load firmware update view */
+    void loadGcsFirmwareUpdateView();
+
+
     void comPortOpenCloseButtonClick();
     void onSerialDataReady();
 private Q_SLOTS:
@@ -62,7 +89,7 @@ private Q_SLOTS:
 
 private:
     Ui::MainWindow *ui;
-    SerialSettingsWindow *m_SerialConfigWindow;
+    SerialSetting *m_SerialSettingWindow;
     QextSerialPort *m_port;
 
     void createDockWidgets();
