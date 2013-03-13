@@ -92,8 +92,8 @@
     <property name="title">
      <string>Perspective</string>
     </property>
-    <addaction name="actionEngineer"/>
-    <addaction name="actionOperator"/>
+    <addaction name="actionEngineerView"/>
+    <addaction name="actionOperatorView"/>
    </widget>
    <widget class="QMenu" name="menuMain_Widgets">
     <property name="title">
@@ -132,7 +132,10 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <action name="actionEngineer">
+  <action name="actionEngineerView">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="../../gss_resources.qrc">
      <normaloff>:/files/images_icons/apps/preferences_system.ico</normaloff>:/files/images_icons/apps/preferences_system.ico</iconset>
@@ -141,7 +144,10 @@
     <string>Engineer</string>
    </property>
   </action>
-  <action name="actionOperator">
+  <action name="actionOperatorView">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="../../gss_resources.qrc">
      <normaloff>:/files/images_icons/apps/engineer_avatar.ico</normaloff>:/files/images_icons/apps/engineer_avatar.ico</iconset>
@@ -242,5 +248,22 @@
  <resources>
   <include location="../../gss_resources.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
