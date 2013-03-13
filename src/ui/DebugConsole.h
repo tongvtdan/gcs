@@ -15,8 +15,16 @@ public:
     explicit DebugConsole(QWidget *parent = 0);
     ~DebugConsole();
 
-private:
     Ui::DebugConsole *debug_ui;
+public slots:
+    /*! @brief send data over serial*/
+    void sendData();
+signals:
+    void m_transmitButtonClick();   /// signal when transmit button click
+
+
+private:
+//    Ui::DebugConsole *debug_ui;
 };
 
 #endif // DEBUGCONSOLE_H

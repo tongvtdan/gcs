@@ -18,50 +18,14 @@
     <normaloff>:/files/images_icons/apps/globe.ico</normaloff>:/files/images_icons/apps/globe.ico</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="comOpenCloseButton">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>140</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Connect</string>
-    </property>
-   </widget>
-   <widget class="QPlainTextEdit" name="receiveText">
+   <widget class="QPlainTextEdit" name="messageDisplay">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>60</y>
-      <width>381</width>
-      <height>101</height>
+      <y>20</y>
+      <width>651</width>
+      <height>271</height>
      </rect>
-    </property>
-   </widget>
-   <widget class="QPlainTextEdit" name="sendText">
-    <property name="geometry">
-     <rect>
-      <x>430</x>
-      <y>60</y>
-      <width>301</width>
-      <height>51</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="sendButton">
-    <property name="geometry">
-     <rect>
-      <x>520</x>
-      <y>140</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Send</string>
     </property>
    </widget>
   </widget>

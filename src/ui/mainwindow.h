@@ -6,6 +6,7 @@
 
 #include "SerialSetting.h"
 #include "qextserialport.h"
+#include "DebugConsole.h"
 namespace Ui {
 class MainWindow;
 }
@@ -76,13 +77,11 @@ public slots:
     /** @brief Load firmware update view */
     void loadGcsFirmwareUpdateView();
 
-
-    void comPortOpenCloseButtonClick();
     void onSerialDataReady();
+    void onPortNameChanged(QString a_name);
 private Q_SLOTS:
     void onComSettingTriggered();
     void onComOpenCloseTriggered();
-    void onSendButtonClick();
     void onDebugConsoleTriggered();
 
 
@@ -90,6 +89,7 @@ private Q_SLOTS:
 private:
     Ui::MainWindow *ui;
     SerialSetting *m_SerialSettingWindow;
+    DebugConsole *m_debugConsoleWindow;
     QextSerialPort *m_port;
 
     void createDockWidgets();
