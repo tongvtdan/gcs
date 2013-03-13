@@ -72,7 +72,7 @@ border: 1px solid #777777;
 
  QGroupBox::title {
      subcontrol-origin: margin;
-     subcontrol-position: top left; /* position at the top center */
+     subcontrol-position: top center; /* position at the top center */
      margin: 0 3px 0px 3px;
      padding: 0 3px 0px 0px;
      font: bold 8px;
@@ -133,7 +133,7 @@ QDockWidget::title {
 
 QSeparator {
     color: #EEEEEE;
-}
+    }
 
 
 QSpinBox {
@@ -185,9 +185,9 @@ QPushButton {
     min-width: 60px;*/
     min-height: 20px;
     /*min-width: 24px;*/
-/*    max-height: 20px;*/
+    max-height: 20px;
 	border: 0px solid #59666f;
-	border-radius: 1px;
+	border-radius: 2px;
 	padding-left: 8px;
 	padding-right: 8px;
 	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #59666f, stop: 1 #414B52);
@@ -207,9 +207,9 @@ QToolButton {
 	font-weight: bold;
 	min-height: 20px;
 	/*min-width: 24px;*/
-/*	max-height: 20px;*/
+	max-height: 20px;
 	border: 0px solid #4A4A4F;
-	border-radius: 10px;
+	border-radius: 2px;
         padding-left: 3px;
     padding-right: 3px;
 	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #59666f, stop: 1 #414B52);
@@ -310,7 +310,7 @@ QPushButton:pressed#forceLandButton {
 	background-clip: border;
 	border-width: 1px;
 	border-color: #555555;
-	border-radius: 10px;
+	border-radius: 5px;
 }
 
 QPushButton#killButton {

@@ -245,7 +245,7 @@ QPushButton:pressed#forceLandButton {
 	background-clip: border;
 	border-width: 1px;
 	border-color: #222222;
-	border-radius: 10px;
+	border-radius: 5px;
 }
 
 QPushButton#killButton {
