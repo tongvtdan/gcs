@@ -49,7 +49,7 @@ SerialSettingsWindow::SerialSettingsWindow(QWidget *parent) :
     port_ui->queryModeBox->addItem("Polling", QextSerialPort::Polling);
     port_ui->queryModeBox->addItem("EventDriven", QextSerialPort::EventDriven);
     //! [0]
-    port_ui->led->turnOff();
+//    port_ui->led->turnOff();
     timer = new QTimer(this);
     timer->setInterval(40);
     //! [1]
@@ -100,7 +100,7 @@ void SerialSettingsWindow::onPortNameChanged(const QString &/*name*/)
 {
     if (port->isOpen()) {
         port->close();
-        port_ui->led->turnOff();
+//        port_ui->led->turnOff();
     }
 }
 
@@ -154,7 +154,7 @@ void SerialSettingsWindow::onConnectButtonClicked()
         port_ui->connectButton->setText("Connect");
         port_ui->connectStatusLabel->setText("Disconnected");
     }
-    port_ui->led->turnOn(port->isOpen());
+//    port_ui->led->turnOn(port->isOpen());
 }
 
 void SerialSettingsWindow::onReadyRead()

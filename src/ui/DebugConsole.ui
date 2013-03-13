@@ -59,31 +59,6 @@
      <item row="1" column="0">
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="HLed" name="led" native="true">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>20</width>
-           <height>20</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>25</width>
-           <height>25</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(0, 85, 0);</string>
-         </property>
-        </widget>
-       </item>
-       <item>
         <widget class="QPushButton" name="transmitButton">
          <property name="toolTip">
           <string>Send the ASCII text or HEX values over the link</string>
@@ -116,23 +91,7 @@
     </layout>
    </item>
   </layout>
-  <zorder>sendText</zorder>
-  <zorder>sentText</zorder>
-  <zorder>connectButton</zorder>
-  <zorder>receiveText</zorder>
-  <zorder>transmitButton</zorder>
-  <zorder>clearButton</zorder>
-  <zorder>receiveText</zorder>
-  <zorder>led</zorder>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>HLed</class>
-   <extends>QWidget</extends>
-   <header>hled.h</header>
-   <container>1</container>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections>
   <connection>
