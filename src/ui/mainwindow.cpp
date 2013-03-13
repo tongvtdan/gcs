@@ -21,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->mainToolBar->addAction(ui->actionEngineer);
     ui->mainToolBar->addAction(ui->actionOperator);
     /** @brief Create ComSerialConfigurationWindow dialog*/
-    m_SerialConfigWindow = new SerialSettingsWindow(this); 
+    m_SerialConfigWindow = new SerialSettingsWindow(this); // create Serial Setting window
 
     loadStyle(currentStyle);
 
@@ -200,6 +200,7 @@ void MainWindow::createDockWidgets()
 
     DebugConsole *debug = dynamic_cast<DebugConsole*>(consoleDockWidget->widget());
     debug->show();
+//    connect(m_SerialConfigWindow->SerialSettingsWindow.port_ui->connectButton, SIGNAL(clicked()), DebugConsole, SLOT
     //connect(mavlinkDecoder, SIGNAL(textMessageReceived(int, int, int, const QString)), debugConsole, SLOT(receiveTextMessage(int, int, int, const QString)));
     addDockWidget(Qt::BottomDockWidgetArea,consoleDockWidget);
 }
