@@ -22,13 +22,16 @@ public slots:
     void updatePortNameChanged(QString p_name);
     void onConnectButtonClick(bool buttonstate);
     void onDataReceive(QByteArray m_data);
+//    void onAutoPackageSignChanged();
+//    void onStartSignChanged();
+//    void onStopSignChanged();
 signals:
     void m_connectButtonClick();   /// signal when transmit button click
     void sendButtonClick(QByteArray m_text);
 
 
 private:
-//    SerialSetting* m_serial;
+    QString str;
 };
 
 #endif // DEBUGCONSOLE_H

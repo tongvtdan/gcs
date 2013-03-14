@@ -30,12 +30,11 @@ public slots:
     void onDataBitsChanged(int idx);
     void onStopBitsChanged(int idx);
     void onQueryModeChanged(int idx);
-
-//    void onCloseButtonClicked();
-//    void onConnectButtonClicked();
+    /*! Connect port->readyRead signal in order to call from outside*/
     void onReadyRead();
-
+    /*! Trigger when a device plug or unplug from COM/USB port*/
     void onPortAddedOrRemoved();
+    /*! Update a status label in Serial Setting Window*/
     void updatePortStatus();
 signals:
     void portNameChanged(QString newname);

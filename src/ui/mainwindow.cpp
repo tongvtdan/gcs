@@ -257,7 +257,6 @@ void MainWindow::onComOpenCloseTriggered()
     {
         m_SerialSettingWindow->SerialSetting::port->close();
         ui->actionConnect->setText("Connect");
-//        m_debugConsoleWindow->DebugConsole::debug_ui->
     }
     else
     {

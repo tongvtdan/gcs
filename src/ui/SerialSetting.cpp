@@ -63,7 +63,7 @@ SerialSetting::SerialSetting(QWidget *parent) :
     connect(enumerator, SIGNAL(deviceDiscovered(QextPortInfo)), SLOT(onPortAddedOrRemoved()));
     connect(enumerator, SIGNAL(deviceRemoved(QextPortInfo)), SLOT(onPortAddedOrRemoved()));
     connect(port, SIGNAL(readyRead()),SLOT(onReadyRead()));
-//    connect(port,SIGNAL(aboutToClose()),SLOT(updatePortStatus()));
+    connect(port,SIGNAL(aboutToClose()),SLOT(updatePortStatus()));
 
 }
 
@@ -137,12 +137,6 @@ void SerialSetting::onPortAddedOrRemoved()
 
 void SerialSetting::updatePortStatus()
 {
-    if(port->isOpen())
-    {
-       serial_ui->label->setText(tr("Connected"));
-    }
-    else {
-        serial_ui->label->setText(tr("Disconnected"));
-    }
+   port->flush();
 }
 

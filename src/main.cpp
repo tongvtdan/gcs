@@ -5,7 +5,8 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     MainWindow w;
-    w.setWindowState(w.windowState() | Qt::WindowMaximized);
+    /// to show window maximum
+//    w.setWindowState(w.windowState() | Qt::WindowMaximized);
 //    w.showMaximized();
     w.show();
 
