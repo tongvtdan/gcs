@@ -34,6 +34,8 @@ public:
         VIEW_UNCONNECTED,    ///< View in unconnected mode, when no GSS System is available
         VIEW_FULL            ///< All widgets shown at once
     };
+    SerialSetting *m_SerialSettingWindow;
+    DebugConsole *m_debugConsoleWindow;
 protected:
 
     GCS_MAINWINDOW_STYLE currentStyle;
@@ -77,8 +79,10 @@ public slots:
     /** @brief Load firmware update view */
     void loadGcsFirmwareUpdateView();
 
-    void onSerialDataReady();
-    void onPortNameChanged(QString a_name);
+    void onSerialDataReady(QByteArray m_dataReceived);       /// will connect data received from port in Serial Setting window to display inDebug console window
+    void getPortNameChanged(QString a_name);
+    void handleConnection();    /// handle connection between Serial Setting and other widgets
+    void onSendData(QByteArray m_data);    /// will call slot from Serial
 private Q_SLOTS:
     void onComSettingTriggered();
     void onComOpenCloseTriggered();
@@ -88,11 +92,12 @@ private Q_SLOTS:
 
 private:
     Ui::MainWindow *ui;
-    SerialSetting *m_SerialSettingWindow;
-    DebugConsole *m_debugConsoleWindow;
+
     QextSerialPort *m_port;
+    QString m_portName;
 
     void createDockWidgets();
+
 };
 
 #endif // MAINWINDOW_H

@@ -12,7 +12,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),
     currentStyle(GCS_MAINWINDOW_STYLE_INDOOR),
-    currentView (VIEW_UNCONNECTED),
+    currentView (VIEW_ENGINEER),
     styleFileName(QCoreApplication::applicationDirPath() + "style-indoor.css")
 
 {
@@ -41,11 +41,12 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->actionOperatorView, SIGNAL(triggered()), SLOT(loadGcsOperatorView()));
     connect(ui->actionCom_Settings,SIGNAL(triggered()),SLOT(onComSettingTriggered()));
     connect(ui->actionConnect,SIGNAL(triggered()),SLOT(onComOpenCloseTriggered()));
-    connect(m_SerialSettingWindow->SerialSetting::port,SIGNAL(readyRead()),SLOT(onSerialDataReady()));
+//    connect(m_SerialSettingWindow->SerialSetting::port,SIGNAL(readyRead()),SLOT(onSerialDataReady()));
     connect(ui->actionDebug_console, SIGNAL(triggered()),SLOT(onDebugConsoleTriggered()));
-    connect(m_SerialSettingWindow, SIGNAL(portNameChanged(QString)), SLOT(onPortNameChanged(QString)));
-
-
+    connect(m_SerialSettingWindow, SIGNAL(portNameChanged(QString)), SLOT(getPortNameChanged(QString)));
+    connect(m_debugConsoleWindow,SIGNAL(m_connectButtonClick()),SLOT(handleConnection()));
+    connect(m_debugConsoleWindow,SIGNAL(sendButtonClick(QByteArray)),SLOT(onSendData(QByteArray)));
+    connect(m_SerialSettingWindow,SIGNAL(dataAvailable(QByteArray)),SLOT(onSerialDataReady(QByteArray)));
 }
 
 MainWindow::~MainWindow()
@@ -215,18 +216,33 @@ void MainWindow::loadGcsFirmwareUpdateView()
 }
 
 
-void MainWindow::onSerialDataReady()
+void MainWindow::onSerialDataReady(QByteArray m_dataReceived)
 {
-//    if(m_SerialSettingWindow->SerialSetting::port->bytesAvailable())
-//    {
-//        ui->receiveText->moveCursor(QTextCursor::End);
-//        ui->receiveText->insertPlainText(QString::fromLatin1(m_SerialSettingWindow->SerialSetting::port->readAll()));
-    //    }
+    m_debugConsoleWindow->onDataReceive(m_dataReceived);
 }
 
-void MainWindow::onPortNameChanged(QString a_name)
+void MainWindow::getPortNameChanged(QString a_name)
 {
-    ui->messageDisplay->insertPlainText("Port changed"+a_name);
+    ui->messageDisplay->insertPlainText("Port changed"+a_name);     // update changed form Serial Setting window
+    m_debugConsoleWindow->updatePortNameChanged(a_name);
+    m_portName = a_name;// update to debug console window
+}
+
+void MainWindow::handleConnection()
+{
+    if(m_SerialSettingWindow->SerialSetting::port->isOpen())
+    {
+        m_SerialSettingWindow->SerialSetting::port->close();
+        ui->actionConnect->setText("Connect");
+
+    }
+    else
+    {
+        m_SerialSettingWindow->SerialSetting::port->setPortName(m_portName);
+        m_SerialSettingWindow->SerialSetting::port->open(QIODevice::ReadWrite);
+         ui->actionConnect->setText("Disconn.");
+    }
+     m_SerialSettingWindow->updatePortStatus();
 }
 
 void MainWindow::onComSettingTriggered()
@@ -245,7 +261,7 @@ void MainWindow::onComOpenCloseTriggered()
     }
     else
     {
-        m_SerialSettingWindow->SerialSetting::port->setPortName("COM9");
+        m_SerialSettingWindow->SerialSetting::port->setPortName(m_portName);
         m_SerialSettingWindow->SerialSetting::port->open(QIODevice::ReadWrite);
          ui->actionConnect->setText("Disconn");
     }
@@ -275,6 +291,14 @@ void MainWindow::createDockWidgets()
     serialDockWidget = new QDockWidget(tr("Serial Setting"), this);
     serialDockWidget->setWidget(m_SerialSettingWindow );
     serialDockWidget->setObjectName("SERIALSETTING_DOCKWIDGET");
-    addDockWidget(Qt::RightDockWidgetArea,serialDockWidget);
+    addDockWidget(Qt::BottomDockWidgetArea,serialDockWidget);
     }
+}
+void MainWindow::onSendData(QByteArray m_data)
+{
+    if(m_SerialSettingWindow->SerialSetting::port->isOpen())
+    {
+        m_SerialSettingWindow->SerialSetting::port->write(m_data);
+    }
+
 }

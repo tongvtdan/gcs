@@ -86,6 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-slots">Public Slots</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classMainWindow-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -116,6 +117,16 @@ Public Types</h2></td></tr>
 <a class="el" href="classMainWindow.html#ab3937cd642a61300ecdcbfd403e93d8aac523f49aeaded490b3b5123d40341936">GCS_MAINWINDOW_STYLE_OUTDOOR</a>
  }</td></tr>
 <tr class="separator:ab3937cd642a61300ecdcbfd403e93d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e35446b2e0751cae2216d909a2c529c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a1e35446b2e0751cae2216d909a2c529c">GCS_VIEW_SECTIONS</a> { <br/>
+&#160;&#160;<a class="el" href="classMainWindow.html#a1e35446b2e0751cae2216d909a2c529ca7450c3f1be825c36fa239e6512c26291">VIEW_ENGINEER</a>, 
+<a class="el" href="classMainWindow.html#a1e35446b2e0751cae2216d909a2c529cad68d872fd82c40740edfba1afbe3b3bf">VIEW_OPERATOR</a>, 
+<a class="el" href="classMainWindow.html#a1e35446b2e0751cae2216d909a2c529ca18a7745e7baa875e1d1e8aaf0e8c3912">VIEW_FIRMWAREUPDATE</a>, 
+<a class="el" href="classMainWindow.html#a1e35446b2e0751cae2216d909a2c529cae01c9ceb85f047ff97ef6db06d571e71">VIEW_UNCONNECTED</a>, 
+<br/>
+&#160;&#160;<a class="el" href="classMainWindow.html#a1e35446b2e0751cae2216d909a2c529ca61869f1304b3a97f508a29f70789847e">VIEW_FULL</a>
+<br/>
+ }</td></tr>
+<tr class="separator:a1e35446b2e0751cae2216d909a2c529c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Public Slots</h2></td></tr>
@@ -143,10 +154,22 @@ Public Slots</h2></td></tr>
 <tr class="memitem:ae92f12fde03e331d037794bdf8b3413a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#ae92f12fde03e331d037794bdf8b3413a">loadOutdoorStyle</a> ()</td></tr>
 <tr class="memdesc:ae92f12fde03e331d037794bdf8b3413a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch to outdoor mission style.  <a href="#ae92f12fde03e331d037794bdf8b3413a">More...</a><br/></td></tr>
 <tr class="separator:ae92f12fde03e331d037794bdf8b3413a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fc6b8aa494a4a0752fdf1453cbba418"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a6fc6b8aa494a4a0752fdf1453cbba418">comPortOpenCloseButtonClick</a> ()</td></tr>
-<tr class="separator:a6fc6b8aa494a4a0752fdf1453cbba418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7090a36ef63df1c4c4c8924f47f7685d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a7090a36ef63df1c4c4c8924f47f7685d">loadGcsUnconnectedView</a> ()</td></tr>
+<tr class="memdesc:a7090a36ef63df1c4c4c8924f47f7685d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load default view when no GSS System is connected.  <a href="#a7090a36ef63df1c4c4c8924f47f7685d">More...</a><br/></td></tr>
+<tr class="separator:a7090a36ef63df1c4c4c8924f47f7685d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8fd2f484f8d1eba49ec6739228f2c22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#aa8fd2f484f8d1eba49ec6739228f2c22">loadGcsEngineerView</a> ()</td></tr>
+<tr class="memdesc:aa8fd2f484f8d1eba49ec6739228f2c22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load view for engineer.  <a href="#aa8fd2f484f8d1eba49ec6739228f2c22">More...</a><br/></td></tr>
+<tr class="separator:aa8fd2f484f8d1eba49ec6739228f2c22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87ed188956aa26396fe413804c7ba39b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a87ed188956aa26396fe413804c7ba39b">loadGcsOperatorView</a> ()</td></tr>
+<tr class="memdesc:a87ed188956aa26396fe413804c7ba39b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load view for operator.  <a href="#a87ed188956aa26396fe413804c7ba39b">More...</a><br/></td></tr>
+<tr class="separator:a87ed188956aa26396fe413804c7ba39b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1dc5f20a16d479e9627dd20fd51f8e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#ac1dc5f20a16d479e9627dd20fd51f8e9">loadGcsFirmwareUpdateView</a> ()</td></tr>
+<tr class="memdesc:ac1dc5f20a16d479e9627dd20fd51f8e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load firmware update view.  <a href="#ac1dc5f20a16d479e9627dd20fd51f8e9">More...</a><br/></td></tr>
+<tr class="separator:ac1dc5f20a16d479e9627dd20fd51f8e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9992dfe0db7fc5674023aff334ea908"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#ae9992dfe0db7fc5674023aff334ea908">onSerialDataReady</a> ()</td></tr>
 <tr class="separator:ae9992dfe0db7fc5674023aff334ea908"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfd184d2e25d4a6bece0f8a812f90d9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#adfd184d2e25d4a6bece0f8a812f90d9d">getPortNameChanged</a> (QString a_name)</td></tr>
+<tr class="separator:adfd184d2e25d4a6bece0f8a812f90d9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -155,18 +178,28 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae98d00a93bc118200eeef9f9bba1dba7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#ae98d00a93bc118200eeef9f9bba1dba7">~MainWindow</a> ()</td></tr>
 <tr class="separator:ae98d00a93bc118200eeef9f9bba1dba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a7399a9c91dadafa3137191d5c332d1ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a7399a9c91dadafa3137191d5c332d1ed">loadGcsViewState</a> ()</td></tr>
+<tr class="separator:a7399a9c91dadafa3137191d5c332d1ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:afda2a7357660cf45ea61ceefd3a805de"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#afda2a7357660cf45ea61ceefd3a805de">styleFileName</a></td></tr>
-<tr class="separator:afda2a7357660cf45ea61ceefd3a805de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82c55b88ae395766858758e3acab9d15"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMainWindow.html#ab3937cd642a61300ecdcbfd403e93d8a">GCS_MAINWINDOW_STYLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a82c55b88ae395766858758e3acab9d15">currentStyle</a></td></tr>
 <tr class="separator:a82c55b88ae395766858758e3acab9d15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af44dfcba2a003d03de83ecf7796874b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMainWindow.html#a1e35446b2e0751cae2216d909a2c529c">GCS_VIEW_SECTIONS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#af44dfcba2a003d03de83ecf7796874b2">currentView</a></td></tr>
+<tr class="memdesc:af44dfcba2a003d03de83ecf7796874b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keeps track of the current view.  <a href="#af44dfcba2a003d03de83ecf7796874b2">More...</a><br/></td></tr>
+<tr class="separator:af44dfcba2a003d03de83ecf7796874b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afda2a7357660cf45ea61ceefd3a805de"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#afda2a7357660cf45ea61ceefd3a805de">styleFileName</a></td></tr>
+<tr class="separator:afda2a7357660cf45ea61ceefd3a805de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c65e9e47772e097d07cf40849cbe1fd"><td class="memItemLeft" align="right" valign="top">QPointer&lt; QDockWidget &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a5c65e9e47772e097d07cf40849cbe1fd">consoleDockWidget</a></td></tr>
 <tr class="separator:a5c65e9e47772e097d07cf40849cbe1fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af53dc5814be111b5e9b89a0121521bee"><td class="memItemLeft" align="right" valign="top">QPointer&lt; QDockWidget &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#af53dc5814be111b5e9b89a0121521bee">serialDockWidget</a></td></tr>
+<tr class="separator:af53dc5814be111b5e9b89a0121521bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="mainwindow_8h_source.html#l00013">13</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+<p>Definition at line <a class="el" href="mainwindow_8h_source.html#l00014">14</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="ab3937cd642a61300ecdcbfd403e93d8a"></a>
 <div class="memitem">
@@ -186,7 +219,35 @@ Protected Attributes</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="mainwindow_8h_source.html#l00021">21</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+<p>Definition at line <a class="el" href="mainwindow_8h_source.html#l00022">22</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1e35446b2e0751cae2216d909a2c529c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classMainWindow.html#a1e35446b2e0751cae2216d909a2c529c">MainWindow::GCS_VIEW_SECTIONS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a1e35446b2e0751cae2216d909a2c529ca7450c3f1be825c36fa239e6512c26291"></a>VIEW_ENGINEER</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a1e35446b2e0751cae2216d909a2c529cad68d872fd82c40740edfba1afbe3b3bf"></a>VIEW_OPERATOR</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a1e35446b2e0751cae2216d909a2c529ca18a7745e7baa875e1d1e8aaf0e8c3912"></a>VIEW_FIRMWAREUPDATE</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a1e35446b2e0751cae2216d909a2c529cae01c9ceb85f047ff97ef6db06d571e71"></a>VIEW_UNCONNECTED</em>&nbsp;</td><td class="fielddoc">
+<p>View in unconnected mode, when no GSS System is available. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a1e35446b2e0751cae2216d909a2c529ca61869f1304b3a97f508a29f70789847e"></a>VIEW_FULL</em>&nbsp;</td><td class="fielddoc">
+<p>All widgets shown at once. </p>
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="mainwindow_8h_source.html#l00029">29</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
 </div>
 </div>
@@ -212,9 +273,11 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Create ComSerialConfigurationWindow dialog </p>
+<p>Create style</p>
+<p>create Serial Setting window</p>
+<p>create a debug console window </p>
 
-<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00013">13</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00011">11</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
 
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -223,7 +286,7 @@ Protected Attributes</h2></td></tr>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classMainWindow_a8b244be8b7b7db1b08de2a2acb9409db_cgraph.png" border="0" usemap="#classMainWindow_a8b244be8b7b7db1b08de2a2acb9409db_cgraph" alt=""/></div>
 <map name="classMainWindow_a8b244be8b7b7db1b08de2a2acb9409db_cgraph" id="classMainWindow_a8b244be8b7b7db1b08de2a2acb9409db_cgraph">
-<area shape="rect" id="node2" href="classMainWindow.html#a90943faff425726c2c0f03609b7b23ed" title="Load a specific style." alt="" coords="260,31,417,57"/><area shape="rect" id="node5" href="classMainWindow.html#a6fc6b8aa494a4a0752fdf1453cbba418" title="MainWindow::comPortOpenClose\lButtonClick" alt="" coords="232,82,445,123"/><area shape="rect" id="node6" href="classMainWindow.html#ae9992dfe0db7fc5674023aff334ea908" title="MainWindow::onSerialData\lReady" alt="" coords="249,147,428,189"/><area shape="rect" id="node3" href="classMainWindow.html#a45ffee31f45ef516d7aca12befb6be95" title="Shows an info message as popup or as widget." alt="" coords="494,5,701,32"/><area shape="rect" id="node4" href="classMainWindow.html#a191bd2680da169d880f43523c094a4c7" title="Reload the CSS style sheet." alt="" coords="497,56,697,83"/></map>
+<area shape="rect" id="node2" href="classMainWindow.html#a90943faff425726c2c0f03609b7b23ed" title="Load a specific style." alt="" coords="268,31,425,57"/><area shape="rect" id="node5" href="classMainWindow.html#a7399a9c91dadafa3137191d5c332d1ed" title="MainWindow::loadGcsViewState" alt="" coords="510,132,717,159"/><area shape="rect" id="node6" href="classMainWindow.html#aa8fd2f484f8d1eba49ec6739228f2c22" title="Load view for engineer." alt="" coords="233,132,460,159"/><area shape="rect" id="node7" href="classMainWindow.html#a87ed188956aa26396fe413804c7ba39b" title="Load view for operator." alt="" coords="233,183,461,209"/><area shape="rect" id="node8" href="classMainWindow.html#ae9992dfe0db7fc5674023aff334ea908" title="MainWindow::onSerialData\lReady" alt="" coords="257,234,436,275"/><area shape="rect" id="node9" href="classMainWindow.html#adfd184d2e25d4a6bece0f8a812f90d9d" title="MainWindow::getPortNameChanged" alt="" coords="232,300,461,327"/><area shape="rect" id="node3" href="classMainWindow.html#a45ffee31f45ef516d7aca12befb6be95" title="Shows an info message as popup or as widget." alt="" coords="510,5,717,32"/><area shape="rect" id="node4" href="classMainWindow.html#a191bd2680da169d880f43523c094a4c7" title="Reload the CSS style sheet." alt="" coords="513,56,713,83"/><area shape="rect" id="node10" href="classDebugConsole.html#ac5dba611ee5181bc07321a12a7e67427" title="DebugConsole::updatePort\lNameChanged" alt="" coords="526,293,701,334"/></map>
 </div>
 </p>
 
@@ -242,12 +305,12 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00039">39</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00052">52</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a6fc6b8aa494a4a0752fdf1453cbba418"></a>
+<a class="anchor" id="adfd184d2e25d4a6bece0f8a812f90d9d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -255,9 +318,10 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void MainWindow::comPortOpenCloseButtonClick </td>
+          <td class="memname">void MainWindow::getPortNameChanged </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>a_name</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -268,16 +332,27 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00133">133</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00228">228</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
 
 <p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classMainWindow_a6fc6b8aa494a4a0752fdf1453cbba418_icgraph.png" border="0" usemap="#classMainWindow_a6fc6b8aa494a4a0752fdf1453cbba418_icgraph" alt=""/></div>
-<map name="classMainWindow_a6fc6b8aa494a4a0752fdf1453cbba418_icgraph" id="classMainWindow_a6fc6b8aa494a4a0752fdf1453cbba418_icgraph">
-<area shape="rect" id="node2" href="classMainWindow.html#a8b244be8b7b7db1b08de2a2acb9409db" title="MainWindow::MainWindow" alt="" coords="267,12,445,39"/></map>
+<div class="center"><img src="classMainWindow_adfd184d2e25d4a6bece0f8a812f90d9d_cgraph.png" border="0" usemap="#classMainWindow_adfd184d2e25d4a6bece0f8a812f90d9d_cgraph" alt=""/></div>
+<map name="classMainWindow_adfd184d2e25d4a6bece0f8a812f90d9d_cgraph" id="classMainWindow_adfd184d2e25d4a6bece0f8a812f90d9d_cgraph">
+<area shape="rect" id="node2" href="classDebugConsole.html#ac5dba611ee5181bc07321a12a7e67427" title="DebugConsole::updatePort\lNameChanged" alt="" coords="283,5,458,46"/></map>
+</div>
+</p>
+
+<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classMainWindow_adfd184d2e25d4a6bece0f8a812f90d9d_icgraph.png" border="0" usemap="#classMainWindow_adfd184d2e25d4a6bece0f8a812f90d9d_icgraph" alt=""/></div>
+<map name="classMainWindow_adfd184d2e25d4a6bece0f8a812f90d9d_icgraph" id="classMainWindow_adfd184d2e25d4a6bece0f8a812f90d9d_icgraph">
+<area shape="rect" id="node2" href="classMainWindow.html#a8b244be8b7b7db1b08de2a2acb9409db" title="MainWindow::MainWindow" alt="" coords="283,5,461,32"/></map>
 </div>
 </p>
 
@@ -306,7 +381,217 @@ Protected Attributes</h2></td></tr>
 
 <p>Get current visual style. </p>
 
-<p>Definition at line <a class="el" href="mainwindow_8h_source.html#l00040">40</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+<p>Definition at line <a class="el" href="mainwindow_8h_source.html#l00058">58</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa8fd2f484f8d1eba49ec6739228f2c22"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::loadGcsEngineerView </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load view for engineer. </p>
+
+<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00183">183</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+
+<p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classMainWindow_aa8fd2f484f8d1eba49ec6739228f2c22_cgraph.png" border="0" usemap="#classMainWindow_aa8fd2f484f8d1eba49ec6739228f2c22_cgraph" alt=""/></div>
+<map name="classMainWindow_aa8fd2f484f8d1eba49ec6739228f2c22_cgraph" id="classMainWindow_aa8fd2f484f8d1eba49ec6739228f2c22_cgraph">
+<area shape="rect" id="node2" href="classMainWindow.html#a7399a9c91dadafa3137191d5c332d1ed" title="MainWindow::loadGcsViewState" alt="" coords="281,5,487,32"/></map>
+</div>
+</p>
+
+<p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classMainWindow_aa8fd2f484f8d1eba49ec6739228f2c22_icgraph.png" border="0" usemap="#classMainWindow_aa8fd2f484f8d1eba49ec6739228f2c22_icgraph" alt=""/></div>
+<map name="classMainWindow_aa8fd2f484f8d1eba49ec6739228f2c22_icgraph" id="classMainWindow_aa8fd2f484f8d1eba49ec6739228f2c22_icgraph">
+<area shape="rect" id="node2" href="classMainWindow.html#a8b244be8b7b7db1b08de2a2acb9409db" title="MainWindow::MainWindow" alt="" coords="280,5,459,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac1dc5f20a16d479e9627dd20fd51f8e9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::loadGcsFirmwareUpdateView </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load firmware update view. </p>
+
+<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00207">207</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+
+<p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classMainWindow_ac1dc5f20a16d479e9627dd20fd51f8e9_cgraph.png" border="0" usemap="#classMainWindow_ac1dc5f20a16d479e9627dd20fd51f8e9_cgraph" alt=""/></div>
+<map name="classMainWindow_ac1dc5f20a16d479e9627dd20fd51f8e9_cgraph" id="classMainWindow_ac1dc5f20a16d479e9627dd20fd51f8e9_cgraph">
+<area shape="rect" id="node2" href="classMainWindow.html#a7399a9c91dadafa3137191d5c332d1ed" title="MainWindow::loadGcsViewState" alt="" coords="259,12,466,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a87ed188956aa26396fe413804c7ba39b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::loadGcsOperatorView </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load view for operator. </p>
+
+<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00195">195</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+
+<p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classMainWindow_a87ed188956aa26396fe413804c7ba39b_cgraph.png" border="0" usemap="#classMainWindow_a87ed188956aa26396fe413804c7ba39b_cgraph" alt=""/></div>
+<map name="classMainWindow_a87ed188956aa26396fe413804c7ba39b_cgraph" id="classMainWindow_a87ed188956aa26396fe413804c7ba39b_cgraph">
+<area shape="rect" id="node2" href="classMainWindow.html#a7399a9c91dadafa3137191d5c332d1ed" title="MainWindow::loadGcsViewState" alt="" coords="283,5,490,32"/></map>
+</div>
+</p>
+
+<p><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classMainWindow_a87ed188956aa26396fe413804c7ba39b_icgraph.png" border="0" usemap="#classMainWindow_a87ed188956aa26396fe413804c7ba39b_icgraph" alt=""/></div>
+<map name="classMainWindow_a87ed188956aa26396fe413804c7ba39b_icgraph" id="classMainWindow_a87ed188956aa26396fe413804c7ba39b_icgraph">
+<area shape="rect" id="node2" href="classMainWindow.html#a8b244be8b7b7db1b08de2a2acb9409db" title="MainWindow::MainWindow" alt="" coords="283,5,461,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7090a36ef63df1c4c4c8924f47f7685d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::loadGcsUnconnectedView </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load default view when no GSS System is connected. </p>
+
+<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00172">172</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+
+<p><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classMainWindow_a7090a36ef63df1c4c4c8924f47f7685d_cgraph.png" border="0" usemap="#classMainWindow_a7090a36ef63df1c4c4c8924f47f7685d_cgraph" alt=""/></div>
+<map name="classMainWindow_a7090a36ef63df1c4c4c8924f47f7685d_cgraph" id="classMainWindow_a7090a36ef63df1c4c4c8924f47f7685d_cgraph">
+<area shape="rect" id="node2" href="classMainWindow.html#a7399a9c91dadafa3137191d5c332d1ed" title="MainWindow::loadGcsViewState" alt="" coords="305,5,511,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7399a9c91dadafa3137191d5c332d1ed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::loadGcsViewState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00057">57</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+
+<p><div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classMainWindow_a7399a9c91dadafa3137191d5c332d1ed_icgraph.png" border="0" usemap="#classMainWindow_a7399a9c91dadafa3137191d5c332d1ed_icgraph" alt=""/></div>
+<map name="classMainWindow_a7399a9c91dadafa3137191d5c332d1ed_icgraph" id="classMainWindow_a7399a9c91dadafa3137191d5c332d1ed_icgraph">
+<area shape="rect" id="node2" href="classMainWindow.html#a8b244be8b7b7db1b08de2a2acb9409db" title="MainWindow::MainWindow" alt="" coords="560,88,739,115"/><area shape="rect" id="node3" href="classMainWindow.html#a7090a36ef63df1c4c4c8924f47f7685d" title="Load default view when no GSS System is connected." alt="" coords="261,38,512,64"/><area shape="rect" id="node4" href="classMainWindow.html#aa8fd2f484f8d1eba49ec6739228f2c22" title="Load view for engineer." alt="" coords="273,88,500,115"/><area shape="rect" id="node5" href="classMainWindow.html#a87ed188956aa26396fe413804c7ba39b" title="Load view for operator." alt="" coords="273,139,501,166"/><area shape="rect" id="node6" href="classMainWindow.html#ac1dc5f20a16d479e9627dd20fd51f8e9" title="Load firmware update view." alt="" coords="285,190,489,232"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -333,13 +618,13 @@ Protected Attributes</h2></td></tr>
 
 <p>Switch to indoor mission style. </p>
 
-<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00123">123</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00162">162</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
 
-<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classMainWindow_a1112afa6f969644062ecc7da7282e3fc_cgraph.png" border="0" usemap="#classMainWindow_a1112afa6f969644062ecc7da7282e3fc_cgraph" alt=""/></div>
 <map name="classMainWindow_a1112afa6f969644062ecc7da7282e3fc_cgraph" id="classMainWindow_a1112afa6f969644062ecc7da7282e3fc_cgraph">
 <area shape="rect" id="node2" href="classMainWindow.html#a90943faff425726c2c0f03609b7b23ed" title="Load a specific style." alt="" coords="248,31,405,57"/><area shape="rect" id="node3" href="classMainWindow.html#a45ffee31f45ef516d7aca12befb6be95" title="Shows an info message as popup or as widget." alt="" coords="454,5,661,32"/><area shape="rect" id="node4" href="classMainWindow.html#a191bd2680da169d880f43523c094a4c7" title="Reload the CSS style sheet." alt="" coords="457,56,657,83"/></map>
@@ -371,13 +656,13 @@ Protected Attributes</h2></td></tr>
 
 <p>Switch to native application style. </p>
 
-<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00118">118</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00157">157</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
 
-<p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classMainWindow_ae7ee90f73c892bbd94f5194cf0d35f14_cgraph.png" border="0" usemap="#classMainWindow_ae7ee90f73c892bbd94f5194cf0d35f14_cgraph" alt=""/></div>
 <map name="classMainWindow_ae7ee90f73c892bbd94f5194cf0d35f14_cgraph" id="classMainWindow_ae7ee90f73c892bbd94f5194cf0d35f14_cgraph">
 <area shape="rect" id="node2" href="classMainWindow.html#a90943faff425726c2c0f03609b7b23ed" title="Load a specific style." alt="" coords="245,31,403,57"/><area shape="rect" id="node3" href="classMainWindow.html#a45ffee31f45ef516d7aca12befb6be95" title="Shows an info message as popup or as widget." alt="" coords="451,5,658,32"/><area shape="rect" id="node4" href="classMainWindow.html#a191bd2680da169d880f43523c094a4c7" title="Reload the CSS style sheet." alt="" coords="455,56,655,83"/></map>
@@ -409,13 +694,13 @@ Protected Attributes</h2></td></tr>
 
 <p>Switch to outdoor mission style. </p>
 
-<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00128">128</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00167">167</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
 
-<p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classMainWindow_ae92f12fde03e331d037794bdf8b3413a_cgraph.png" border="0" usemap="#classMainWindow_ae92f12fde03e331d037794bdf8b3413a_cgraph" alt=""/></div>
 <map name="classMainWindow_ae92f12fde03e331d037794bdf8b3413a_cgraph" id="classMainWindow_ae92f12fde03e331d037794bdf8b3413a_cgraph">
 <area shape="rect" id="node2" href="classMainWindow.html#a90943faff425726c2c0f03609b7b23ed" title="Load a specific style." alt="" coords="256,31,413,57"/><area shape="rect" id="node3" href="classMainWindow.html#a45ffee31f45ef516d7aca12befb6be95" title="Shows an info message as popup or as widget." alt="" coords="462,5,669,32"/><area shape="rect" id="node4" href="classMainWindow.html#a191bd2680da169d880f43523c094a4c7" title="Reload the CSS style sheet." alt="" coords="465,56,665,83"/></map>
@@ -450,24 +735,24 @@ Protected Attributes</h2></td></tr>
 <p>For style control.</p>
 <p>Load a specific style </p>
 
-<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00046">46</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00085">85</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
 
-<p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div id="dynsection-15-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classMainWindow_a90943faff425726c2c0f03609b7b23ed_cgraph.png" border="0" usemap="#classMainWindow_a90943faff425726c2c0f03609b7b23ed_cgraph" alt=""/></div>
 <map name="classMainWindow_a90943faff425726c2c0f03609b7b23ed_cgraph" id="classMainWindow_a90943faff425726c2c0f03609b7b23ed_cgraph">
 <area shape="rect" id="node2" href="classMainWindow.html#a45ffee31f45ef516d7aca12befb6be95" title="Shows an info message as popup or as widget." alt="" coords="211,5,418,32"/><area shape="rect" id="node3" href="classMainWindow.html#a191bd2680da169d880f43523c094a4c7" title="Reload the CSS style sheet." alt="" coords="215,56,415,83"/></map>
 </div>
 </p>
 
-<p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div id="dynsection-16-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classMainWindow_a90943faff425726c2c0f03609b7b23ed_icgraph.png" border="0" usemap="#classMainWindow_a90943faff425726c2c0f03609b7b23ed_icgraph" alt=""/></div>
 <map name="classMainWindow_a90943faff425726c2c0f03609b7b23ed_icgraph" id="classMainWindow_a90943faff425726c2c0f03609b7b23ed_icgraph">
 <area shape="rect" id="node2" href="classMainWindow.html#a8b244be8b7b7db1b08de2a2acb9409db" title="MainWindow::MainWindow" alt="" coords="223,5,401,32"/><area shape="rect" id="node3" href="classMainWindow.html#ae7ee90f73c892bbd94f5194cf0d35f14" title="Switch to native application style." alt="" coords="216,56,408,83"/><area shape="rect" id="node4" href="classMainWindow.html#a1112afa6f969644062ecc7da7282e3fc" title="Switch to indoor mission style." alt="" coords="215,107,409,133"/><area shape="rect" id="node5" href="classMainWindow.html#ae92f12fde03e331d037794bdf8b3413a" title="Switch to outdoor mission style." alt="" coords="211,157,413,184"/></map>
@@ -497,13 +782,13 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00149">149</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00219">219</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
 
-<p><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-17-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div id="dynsection-17-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classMainWindow_ae9992dfe0db7fc5674023aff334ea908_icgraph.png" border="0" usemap="#classMainWindow_ae9992dfe0db7fc5674023aff334ea908_icgraph" alt=""/></div>
 <map name="classMainWindow_ae9992dfe0db7fc5674023aff334ea908_icgraph" id="classMainWindow_ae9992dfe0db7fc5674023aff334ea908_icgraph">
 <area shape="rect" id="node2" href="classMainWindow.html#a8b244be8b7b7db1b08de2a2acb9409db" title="MainWindow::MainWindow" alt="" coords="232,12,411,39"/></map>
@@ -535,13 +820,13 @@ Protected Attributes</h2></td></tr>
 
 <p>Reload the CSS style sheet. </p>
 
-<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00075">75</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00114">114</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
 
-<p><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-18-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div id="dynsection-18-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classMainWindow_a191bd2680da169d880f43523c094a4c7_icgraph.png" border="0" usemap="#classMainWindow_a191bd2680da169d880f43523c094a4c7_icgraph" alt=""/></div>
 <map name="classMainWindow_a191bd2680da169d880f43523c094a4c7_icgraph" id="classMainWindow_a191bd2680da169d880f43523c094a4c7_icgraph">
 <area shape="rect" id="node2" href="classMainWindow.html#a90943faff425726c2c0f03609b7b23ed" title="Load a specific style." alt="" coords="253,81,411,108"/><area shape="rect" id="node3" href="classMainWindow.html#a8b244be8b7b7db1b08de2a2acb9409db" title="MainWindow::MainWindow" alt="" coords="471,5,649,32"/><area shape="rect" id="node4" href="classMainWindow.html#ae7ee90f73c892bbd94f5194cf0d35f14" title="Switch to native application style." alt="" coords="464,56,656,83"/><area shape="rect" id="node5" href="classMainWindow.html#a1112afa6f969644062ecc7da7282e3fc" title="Switch to indoor mission style." alt="" coords="463,107,657,133"/><area shape="rect" id="node6" href="classMainWindow.html#ae92f12fde03e331d037794bdf8b3413a" title="Switch to outdoor mission style." alt="" coords="459,157,661,184"/></map>
@@ -573,7 +858,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Let the user select the CSS style sheet. </p>
 
-<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00114">114</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00153">153</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
 
 </div>
 </div>
@@ -611,13 +896,13 @@ Protected Attributes</h2></td></tr>
 
 <p>Shows an info message as popup or as widget. </p>
 
-<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00103">103</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00142">142</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
 
-<p><div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-19" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-19-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-19-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div id="dynsection-19-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classMainWindow_a45ffee31f45ef516d7aca12befb6be95_icgraph.png" border="0" usemap="#classMainWindow_a45ffee31f45ef516d7aca12befb6be95_icgraph" alt=""/></div>
 <map name="classMainWindow_a45ffee31f45ef516d7aca12befb6be95_icgraph" id="classMainWindow_a45ffee31f45ef516d7aca12befb6be95_icgraph">
 <area shape="rect" id="node2" href="classMainWindow.html#a90943faff425726c2c0f03609b7b23ed" title="Load a specific style." alt="" coords="261,81,419,108"/><area shape="rect" id="node3" href="classMainWindow.html#a8b244be8b7b7db1b08de2a2acb9409db" title="MainWindow::MainWindow" alt="" coords="479,5,657,32"/><area shape="rect" id="node4" href="classMainWindow.html#ae7ee90f73c892bbd94f5194cf0d35f14" title="Switch to native application style." alt="" coords="472,56,664,83"/><area shape="rect" id="node5" href="classMainWindow.html#a1112afa6f969644062ecc7da7282e3fc" title="Switch to indoor mission style." alt="" coords="471,107,665,133"/><area shape="rect" id="node6" href="classMainWindow.html#ae92f12fde03e331d037794bdf8b3413a" title="Switch to outdoor mission style." alt="" coords="467,157,669,184"/></map>
@@ -645,7 +930,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mainwindow_8h_source.html#l00030">30</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+<p>Definition at line <a class="el" href="mainwindow_8h_source.html#l00045">45</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
 </div>
 </div>
@@ -667,7 +952,53 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mainwindow_8h_source.html#l00029">29</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+<p>Definition at line <a class="el" href="mainwindow_8h_source.html#l00039">39</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af44dfcba2a003d03de83ecf7796874b2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMainWindow.html#a1e35446b2e0751cae2216d909a2c529c">GCS_VIEW_SECTIONS</a> MainWindow::currentView</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Keeps track of the current view. </p>
+
+<p>Definition at line <a class="el" href="mainwindow_8h_source.html#l00041">41</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af53dc5814be111b5e9b89a0121521bee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPointer&lt;QDockWidget&gt; MainWindow::serialDockWidget</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="mainwindow_8h_source.html#l00046">46</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
 </div>
 </div>
@@ -689,7 +1020,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mainwindow_8h_source.html#l00028">28</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+<p>Definition at line <a class="el" href="mainwindow_8h_source.html#l00043">43</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
 </div>
 </div>
@@ -700,7 +1031,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 13 2013 09:26:27 for GSS Control Station by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 14 2013 05:32:07 for GSS Control Station by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

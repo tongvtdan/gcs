@@ -1,0 +1,7 @@
+<map id="MainWindow::showInfoMessage" name="MainWindow::showInfoMessage">
+<area shape="rect" id="node2" href="$classMainWindow.html#a90943faff425726c2c0f03609b7b23ed" title="Load a specific style." alt="" coords="261,81,419,108"/>
+<area shape="rect" id="node3" href="$classMainWindow.html#a8b244be8b7b7db1b08de2a2acb9409db" title="MainWindow::MainWindow" alt="" coords="479,5,657,32"/>
+<area shape="rect" id="node4" href="$classMainWindow.html#ae7ee90f73c892bbd94f5194cf0d35f14" title="Switch to native application style." alt="" coords="472,56,664,83"/>
+<area shape="rect" id="node5" href="$classMainWindow.html#a1112afa6f969644062ecc7da7282e3fc" title="Switch to indoor mission style." alt="" coords="471,107,665,133"/>
+<area shape="rect" id="node6" href="$classMainWindow.html#ae92f12fde03e331d037794bdf8b3413a" title="Switch to outdoor mission style." alt="" coords="467,157,669,184"/>
+</map>

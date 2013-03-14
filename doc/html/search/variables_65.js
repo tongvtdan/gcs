@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['enumerator',['enumerator',['../classSerialSettingsWindow.html#a8339b943bb39db2d960beafb55998ae4',1,'SerialSettingsWindow']]]
+  ['enumerator',['enumerator',['../classSerialSetting.html#abd56b753109f143d2958f7b67b2ec5f5',1,'SerialSetting']]]
 ];

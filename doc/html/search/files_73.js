@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['serialconfigurationwindow_2ecpp',['SerialConfigurationWindow.cpp',['../SerialConfigurationWindow_8cpp.html',1,'']]],
-  ['serialconfigurationwindow_2eh',['SerialConfigurationWindow.h',['../SerialConfigurationWindow_8h.html',1,'']]]
+  ['serialsetting_2ecpp',['SerialSetting.cpp',['../SerialSetting_8cpp.html',1,'']]],
+  ['serialsetting_2eh',['SerialSetting.h',['../SerialSetting_8h.html',1,'']]]
 ];

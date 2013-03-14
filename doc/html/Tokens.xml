@@ -22,6 +22,40 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>sendData</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>slot</Type>
+      <Scope>DebugConsole</Scope>
+    </TokenIdentifier>
+    <Path>classDebugConsole.html</Path>
+    <Anchor>af18fd20aca2775879ccee2d8e4e28342</Anchor>
+    <Abstract>send data over serial</Abstract>
+    <DeclaredIn>DebugConsole.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>updatePortNameChanged</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>slot</Type>
+      <Scope>DebugConsole</Scope>
+    </TokenIdentifier>
+    <Path>classDebugConsole.html</Path>
+    <Anchor>ac5dba611ee5181bc07321a12a7e67427</Anchor>
+    <DeclaredIn>DebugConsole.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>m_transmitButtonClick</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>signal</Type>
+      <Scope>DebugConsole</Scope>
+    </TokenIdentifier>
+    <Path>classDebugConsole.html</Path>
+    <Anchor>a314853136abaeddfc8bd3be703d25a9a</Anchor>
+    <DeclaredIn>DebugConsole.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>DebugConsole</Name>
       <APILanguage>cpp</APILanguage>
       <Type>instm</Type>
@@ -341,13 +375,50 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>comPortOpenCloseButtonClick</Name>
+      <Name>loadGcsUnconnectedView</Name>
       <APILanguage>cpp</APILanguage>
       <Type>slot</Type>
       <Scope>MainWindow</Scope>
     </TokenIdentifier>
     <Path>classMainWindow.html</Path>
-    <Anchor>a6fc6b8aa494a4a0752fdf1453cbba418</Anchor>
+    <Anchor>a7090a36ef63df1c4c4c8924f47f7685d</Anchor>
+    <Abstract>Load default view when no GSS System is connected.</Abstract>
+    <DeclaredIn>mainwindow.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>loadGcsEngineerView</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>slot</Type>
+      <Scope>MainWindow</Scope>
+    </TokenIdentifier>
+    <Path>classMainWindow.html</Path>
+    <Anchor>aa8fd2f484f8d1eba49ec6739228f2c22</Anchor>
+    <Abstract>Load view for engineer.</Abstract>
+    <DeclaredIn>mainwindow.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>loadGcsOperatorView</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>slot</Type>
+      <Scope>MainWindow</Scope>
+    </TokenIdentifier>
+    <Path>classMainWindow.html</Path>
+    <Anchor>a87ed188956aa26396fe413804c7ba39b</Anchor>
+    <Abstract>Load view for operator.</Abstract>
+    <DeclaredIn>mainwindow.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>loadGcsFirmwareUpdateView</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>slot</Type>
+      <Scope>MainWindow</Scope>
+    </TokenIdentifier>
+    <Path>classMainWindow.html</Path>
+    <Anchor>ac1dc5f20a16d479e9627dd20fd51f8e9</Anchor>
+    <Abstract>Load firmware update view.</Abstract>
     <DeclaredIn>mainwindow.h</DeclaredIn>
   </Token>
   <Token>
@@ -359,6 +430,17 @@
     </TokenIdentifier>
     <Path>classMainWindow.html</Path>
     <Anchor>ae9992dfe0db7fc5674023aff334ea908</Anchor>
+    <DeclaredIn>mainwindow.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getPortNameChanged</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>slot</Type>
+      <Scope>MainWindow</Scope>
+    </TokenIdentifier>
+    <Path>classMainWindow.html</Path>
+    <Anchor>adfd184d2e25d4a6bece0f8a812f90d9d</Anchor>
     <DeclaredIn>mainwindow.h</DeclaredIn>
   </Token>
   <Token>
@@ -385,13 +467,14 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>styleFileName</Name>
+      <Name>loadGcsViewState</Name>
       <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
+      <Type>instm</Type>
       <Scope>MainWindow</Scope>
     </TokenIdentifier>
     <Path>classMainWindow.html</Path>
-    <Anchor>afda2a7357660cf45ea61ceefd3a805de</Anchor>
+    <Anchor>a7399a9c91dadafa3137191d5c332d1ed</Anchor>
+    <DeclaredIn>mainwindow.h</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -405,6 +488,27 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>currentView</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>MainWindow</Scope>
+    </TokenIdentifier>
+    <Path>classMainWindow.html</Path>
+    <Anchor>af44dfcba2a003d03de83ecf7796874b2</Anchor>
+    <Abstract>Keeps track of the current view.</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>styleFileName</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>MainWindow</Scope>
+    </TokenIdentifier>
+    <Path>classMainWindow.html</Path>
+    <Anchor>afda2a7357660cf45ea61ceefd3a805de</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>consoleDockWidget</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
@@ -412,6 +516,16 @@
     </TokenIdentifier>
     <Path>classMainWindow.html</Path>
     <Anchor>a5c65e9e47772e097d07cf40849cbe1fd</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>serialDockWidget</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>MainWindow</Scope>
+    </TokenIdentifier>
+    <Path>classMainWindow.html</Path>
+    <Anchor>af53dc5814be111b5e9b89a0121521bee</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -445,86 +559,226 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>SerialSettingsWindow</Name>
+      <Name>VIEW_ENGINEER</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>econst</Type>
+      <Scope>MainWindow</Scope>
+    </TokenIdentifier>
+    <Path>classMainWindow.html</Path>
+    <Anchor>a1e35446b2e0751cae2216d909a2c529ca7450c3f1be825c36fa239e6512c26291</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>VIEW_OPERATOR</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>econst</Type>
+      <Scope>MainWindow</Scope>
+    </TokenIdentifier>
+    <Path>classMainWindow.html</Path>
+    <Anchor>a1e35446b2e0751cae2216d909a2c529cad68d872fd82c40740edfba1afbe3b3bf</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>VIEW_FIRMWAREUPDATE</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>econst</Type>
+      <Scope>MainWindow</Scope>
+    </TokenIdentifier>
+    <Path>classMainWindow.html</Path>
+    <Anchor>a1e35446b2e0751cae2216d909a2c529ca18a7745e7baa875e1d1e8aaf0e8c3912</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>VIEW_UNCONNECTED</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>econst</Type>
+      <Scope>MainWindow</Scope>
+    </TokenIdentifier>
+    <Path>classMainWindow.html</Path>
+    <Anchor>a1e35446b2e0751cae2216d909a2c529cae01c9ceb85f047ff97ef6db06d571e71</Anchor>
+    <Abstract>View in unconnected mode, when no GSS System is available.</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>VIEW_FULL</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>econst</Type>
+      <Scope>MainWindow</Scope>
+    </TokenIdentifier>
+    <Path>classMainWindow.html</Path>
+    <Anchor>a1e35446b2e0751cae2216d909a2c529ca61869f1304b3a97f508a29f70789847e</Anchor>
+    <Abstract>All widgets shown at once.</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>SerialSetting</Name>
       <APILanguage>c</APILanguage>
       <Type>cl</Type>
-      <Scope>SerialSettingsWindow</Scope>
+      <Scope>SerialSetting</Scope>
     </TokenIdentifier>
-    <Path>classSerialSettingsWindow.html</Path>
-    <DeclaredIn>SerialConfigurationWindow.h</DeclaredIn>
+    <Path>classSerialSetting.html</Path>
+    <DeclaredIn>SerialSetting.h</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>SerialSettingsWindow</Name>
+      <Name>onPortNameChanged</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>slot</Type>
+      <Scope>SerialSetting</Scope>
+    </TokenIdentifier>
+    <Path>classSerialSetting.html</Path>
+    <Anchor>aee23c747db7d4b761692cb470a4c6441</Anchor>
+    <DeclaredIn>SerialSetting.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>onBaudRateChanged</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>slot</Type>
+      <Scope>SerialSetting</Scope>
+    </TokenIdentifier>
+    <Path>classSerialSetting.html</Path>
+    <Anchor>a731751b968a3cc01b6bac24c48fa090c</Anchor>
+    <DeclaredIn>SerialSetting.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>onParityChanged</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>slot</Type>
+      <Scope>SerialSetting</Scope>
+    </TokenIdentifier>
+    <Path>classSerialSetting.html</Path>
+    <Anchor>a64ef135f5799566460732ba3fae90096</Anchor>
+    <DeclaredIn>SerialSetting.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>onDataBitsChanged</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>slot</Type>
+      <Scope>SerialSetting</Scope>
+    </TokenIdentifier>
+    <Path>classSerialSetting.html</Path>
+    <Anchor>a6fe7cab336ecb8793aab4991b2f2ad91</Anchor>
+    <DeclaredIn>SerialSetting.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>onStopBitsChanged</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>slot</Type>
+      <Scope>SerialSetting</Scope>
+    </TokenIdentifier>
+    <Path>classSerialSetting.html</Path>
+    <Anchor>ac4fd3c2da03602446306b18f36a47e9a</Anchor>
+    <DeclaredIn>SerialSetting.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>onQueryModeChanged</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>slot</Type>
+      <Scope>SerialSetting</Scope>
+    </TokenIdentifier>
+    <Path>classSerialSetting.html</Path>
+    <Anchor>a39190796da46bab314e415d6b201a88a</Anchor>
+    <DeclaredIn>SerialSetting.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>onReadyRead</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>slot</Type>
+      <Scope>SerialSetting</Scope>
+    </TokenIdentifier>
+    <Path>classSerialSetting.html</Path>
+    <Anchor>ae96ce05ba97f10540883ab443953f9af</Anchor>
+    <DeclaredIn>SerialSetting.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>onPortAddedOrRemoved</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>slot</Type>
+      <Scope>SerialSetting</Scope>
+    </TokenIdentifier>
+    <Path>classSerialSetting.html</Path>
+    <Anchor>a4c79daac71420645e0f9e4e0237f33b4</Anchor>
+    <DeclaredIn>SerialSetting.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>portNameChanged</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>signal</Type>
+      <Scope>SerialSetting</Scope>
+    </TokenIdentifier>
+    <Path>classSerialSetting.html</Path>
+    <Anchor>a66f946af6177fc3ea2e3d37733c9b175</Anchor>
+    <DeclaredIn>SerialSetting.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>SerialSetting</Name>
       <APILanguage>cpp</APILanguage>
       <Type>instm</Type>
-      <Scope>SerialSettingsWindow</Scope>
+      <Scope>SerialSetting</Scope>
     </TokenIdentifier>
-    <Path>classSerialSettingsWindow.html</Path>
-    <Anchor>a1bbdf8abb153013fd3cbf669925c95ae</Anchor>
-    <DeclaredIn>SerialConfigurationWindow.h</DeclaredIn>
+    <Path>classSerialSetting.html</Path>
+    <Anchor>a793eb2d4f9f49df9d3c8500a27fc9735</Anchor>
+    <DeclaredIn>SerialSetting.h</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>~SerialSettingsWindow</Name>
+      <Name>~SerialSetting</Name>
       <APILanguage>cpp</APILanguage>
       <Type>instm</Type>
-      <Scope>SerialSettingsWindow</Scope>
+      <Scope>SerialSetting</Scope>
     </TokenIdentifier>
-    <Path>classSerialSettingsWindow.html</Path>
-    <Anchor>a57039b17ef2e671c97b43e54fad99692</Anchor>
-    <DeclaredIn>SerialConfigurationWindow.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>timer</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>SerialSettingsWindow</Scope>
-    </TokenIdentifier>
-    <Path>classSerialSettingsWindow.html</Path>
-    <Anchor>a8e89eeb9ae363512bbc42c9d33d2625a</Anchor>
+    <Path>classSerialSetting.html</Path>
+    <Anchor>a4ba642458f99b10e22e1f9a43f8c333d</Anchor>
+    <DeclaredIn>SerialSetting.h</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>port</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>SerialSettingsWindow</Scope>
+      <Scope>SerialSetting</Scope>
     </TokenIdentifier>
-    <Path>classSerialSettingsWindow.html</Path>
-    <Anchor>ac3bbbfde64952967ca0ab6e8d29cbd19</Anchor>
+    <Path>classSerialSetting.html</Path>
+    <Anchor>aade7b364826c1ac427fd5bfdaea084e3</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>enumerator</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>SerialSettingsWindow</Scope>
+      <Scope>SerialSetting</Scope>
     </TokenIdentifier>
-    <Path>classSerialSettingsWindow.html</Path>
-    <Anchor>a8339b943bb39db2d960beafb55998ae4</Anchor>
+    <Path>classSerialSetting.html</Path>
+    <Anchor>abd56b753109f143d2958f7b67b2ec5f5</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>port_ui</Name>
+      <Name>serial_ui</Name>
       <APILanguage>cpp</APILanguage>
       <Type>data</Type>
-      <Scope>SerialSettingsWindow</Scope>
+      <Scope>SerialSetting</Scope>
     </TokenIdentifier>
-    <Path>classSerialSettingsWindow.html</Path>
-    <Anchor>ad88f704ab80a14b404624781c174ed39</Anchor>
+    <Path>classSerialSetting.html</Path>
+    <Anchor>a22df37ac81da97c7789f5090677a2835</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>changeEvent</Name>
+      <Name>m_name</Name>
       <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>SerialSettingsWindow</Scope>
+      <Type>data</Type>
+      <Scope>SerialSetting</Scope>
     </TokenIdentifier>
-    <Path>classSerialSettingsWindow.html</Path>
-    <Anchor>acff25731b54e1b013b64299f9034740a</Anchor>
-    <DeclaredIn>SerialConfigurationWindow.h</DeclaredIn>
+    <Path>classSerialSetting.html</Path>
+    <Anchor>ab4d84835e2e62ba413234aeb8463cd6c</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>

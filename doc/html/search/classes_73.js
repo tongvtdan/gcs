@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['serialsettingswindow',['SerialSettingsWindow',['../classSerialSettingsWindow.html',1,'']]]
+  ['serialsetting',['SerialSetting',['../classSerialSetting.html',1,'']]]
 ];

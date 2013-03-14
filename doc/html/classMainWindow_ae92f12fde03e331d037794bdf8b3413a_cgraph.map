@@ -1,0 +1,5 @@
+<map id="MainWindow::loadOutdoorStyle" name="MainWindow::loadOutdoorStyle">
+<area shape="rect" id="node2" href="$classMainWindow.html#a90943faff425726c2c0f03609b7b23ed" title="Load a specific style." alt="" coords="256,31,413,57"/>
+<area shape="rect" id="node3" href="$classMainWindow.html#a45ffee31f45ef516d7aca12befb6be95" title="Shows an info message as popup or as widget." alt="" coords="462,5,669,32"/>
+<area shape="rect" id="node4" href="$classMainWindow.html#a191bd2680da169d880f43523c094a4c7" title="Reload the CSS style sheet." alt="" coords="465,56,665,83"/>
+</map>

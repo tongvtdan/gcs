@@ -32,6 +32,12 @@
            <height>50</height>
           </size>
          </property>
+         <property name="toolTip">
+          <string>Receive data display</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
          <property name="tabStopWidth">
           <number>60</number>
          </property>
@@ -39,8 +45,11 @@
        </item>
        <item>
         <widget class="QLineEdit" name="sentText">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Data/Text sent&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
-          <string>Enter data/text below to send</string>
+          <string>data/text below to send</string>
          </property>
          <property name="readOnly">
           <bool>true</bool>
@@ -56,7 +65,7 @@
           </size>
          </property>
          <property name="toolTip">
-          <string>Type the bytes to send here, use 0xAA format for HEX (Check HEX checkbox above)</string>
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type the bytes to send here&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
@@ -65,7 +74,7 @@
      <item row="1" column="0">
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QPushButton" name="transmitButton">
+        <widget class="QPushButton" name="sendButton">
          <property name="toolTip">
           <string>Send the ASCII text or HEX values over the link</string>
          </property>
@@ -84,12 +93,18 @@
        <item>
         <widget class="QPushButton" name="connectButton">
          <property name="text">
-          <string>Disconn.</string>
+          <string>Connect</string>
          </property>
          <property name="icon">
           <iconset resource="../../gss_resources.qrc">
            <normaloff>:/files/images_icons/apps/disconnect.ico</normaloff>
            <normalon>:/files/images_icons/apps/connect.ico</normalon>:/files/images_icons/apps/disconnect.ico</iconset>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
          </property>
         </widget>
        </item>

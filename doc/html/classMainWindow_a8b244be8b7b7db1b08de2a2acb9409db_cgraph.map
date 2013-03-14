@@ -1,0 +1,11 @@
+<map id="MainWindow::MainWindow" name="MainWindow::MainWindow">
+<area shape="rect" id="node2" href="$classMainWindow.html#a90943faff425726c2c0f03609b7b23ed" title="Load a specific style." alt="" coords="268,31,425,57"/>
+<area shape="rect" id="node5" href="$classMainWindow.html#a7399a9c91dadafa3137191d5c332d1ed" title="MainWindow::loadGcsViewState" alt="" coords="510,132,717,159"/>
+<area shape="rect" id="node6" href="$classMainWindow.html#aa8fd2f484f8d1eba49ec6739228f2c22" title="Load view for engineer." alt="" coords="233,132,460,159"/>
+<area shape="rect" id="node7" href="$classMainWindow.html#a87ed188956aa26396fe413804c7ba39b" title="Load view for operator." alt="" coords="233,183,461,209"/>
+<area shape="rect" id="node8" href="$classMainWindow.html#ae9992dfe0db7fc5674023aff334ea908" title="MainWindow::onSerialData\lReady" alt="" coords="257,234,436,275"/>
+<area shape="rect" id="node9" href="$classMainWindow.html#adfd184d2e25d4a6bece0f8a812f90d9d" title="MainWindow::getPortNameChanged" alt="" coords="232,300,461,327"/>
+<area shape="rect" id="node3" href="$classMainWindow.html#a45ffee31f45ef516d7aca12befb6be95" title="Shows an info message as popup or as widget." alt="" coords="510,5,717,32"/>
+<area shape="rect" id="node4" href="$classMainWindow.html#a191bd2680da169d880f43523c094a4c7" title="Reload the CSS style sheet." alt="" coords="513,56,713,83"/>
+<area shape="rect" id="node10" href="$classDebugConsole.html#ac5dba611ee5181bc07321a12a7e67427" title="DebugConsole::updatePort\lNameChanged" alt="" coords="526,293,701,334"/>
+</map>

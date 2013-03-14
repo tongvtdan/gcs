@@ -48,6 +48,21 @@
               <Anchor>aa6f51dd2956ff9a2b7d44e8b2754b52e</Anchor>
              </Node>
              <Node>
+              <Name>m_transmitButtonClick</Name>
+              <Path>classDebugConsole.html</Path>
+              <Anchor>a314853136abaeddfc8bd3be703d25a9a</Anchor>
+             </Node>
+             <Node>
+              <Name>sendData</Name>
+              <Path>classDebugConsole.html</Path>
+              <Anchor>af18fd20aca2775879ccee2d8e4e28342</Anchor>
+             </Node>
+             <Node>
+              <Name>updatePortNameChanged</Name>
+              <Path>classDebugConsole.html</Path>
+              <Anchor>ac5dba611ee5181bc07321a12a7e67427</Anchor>
+             </Node>
+             <Node>
               <Name>debug_ui</Name>
               <Path>classDebugConsole.html</Path>
               <Anchor>a4739bd87814ce6db6482b1611c1f787f</Anchor>
@@ -168,6 +183,38 @@
               </Subnodes>
              </Node>
              <Node>
+              <Name>GCS_VIEW_SECTIONS</Name>
+              <Path>classMainWindow.html</Path>
+              <Anchor>a1e35446b2e0751cae2216d909a2c529c</Anchor>
+              <Subnodes>
+               <Node>
+                <Name>VIEW_ENGINEER</Name>
+                <Path>classMainWindow.html</Path>
+                <Anchor>a1e35446b2e0751cae2216d909a2c529ca7450c3f1be825c36fa239e6512c26291</Anchor>
+               </Node>
+               <Node>
+                <Name>VIEW_OPERATOR</Name>
+                <Path>classMainWindow.html</Path>
+                <Anchor>a1e35446b2e0751cae2216d909a2c529cad68d872fd82c40740edfba1afbe3b3bf</Anchor>
+               </Node>
+               <Node>
+                <Name>VIEW_FIRMWAREUPDATE</Name>
+                <Path>classMainWindow.html</Path>
+                <Anchor>a1e35446b2e0751cae2216d909a2c529ca18a7745e7baa875e1d1e8aaf0e8c3912</Anchor>
+               </Node>
+               <Node>
+                <Name>VIEW_UNCONNECTED</Name>
+                <Path>classMainWindow.html</Path>
+                <Anchor>a1e35446b2e0751cae2216d909a2c529cae01c9ceb85f047ff97ef6db06d571e71</Anchor>
+               </Node>
+               <Node>
+                <Name>VIEW_FULL</Name>
+                <Path>classMainWindow.html</Path>
+                <Anchor>a1e35446b2e0751cae2216d909a2c529ca61869f1304b3a97f508a29f70789847e</Anchor>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
               <Name>MainWindow</Name>
               <Path>classMainWindow.html</Path>
               <Anchor>a8b244be8b7b7db1b08de2a2acb9409db</Anchor>
@@ -178,14 +225,39 @@
               <Anchor>ae98d00a93bc118200eeef9f9bba1dba7</Anchor>
              </Node>
              <Node>
-              <Name>comPortOpenCloseButtonClick</Name>
+              <Name>getPortNameChanged</Name>
               <Path>classMainWindow.html</Path>
-              <Anchor>a6fc6b8aa494a4a0752fdf1453cbba418</Anchor>
+              <Anchor>adfd184d2e25d4a6bece0f8a812f90d9d</Anchor>
              </Node>
              <Node>
               <Name>getStyle</Name>
               <Path>classMainWindow.html</Path>
               <Anchor>ab17970f7cc7de1917e182a3fe4e1bbe5</Anchor>
+             </Node>
+             <Node>
+              <Name>loadGcsEngineerView</Name>
+              <Path>classMainWindow.html</Path>
+              <Anchor>aa8fd2f484f8d1eba49ec6739228f2c22</Anchor>
+             </Node>
+             <Node>
+              <Name>loadGcsFirmwareUpdateView</Name>
+              <Path>classMainWindow.html</Path>
+              <Anchor>ac1dc5f20a16d479e9627dd20fd51f8e9</Anchor>
+             </Node>
+             <Node>
+              <Name>loadGcsOperatorView</Name>
+              <Path>classMainWindow.html</Path>
+              <Anchor>a87ed188956aa26396fe413804c7ba39b</Anchor>
+             </Node>
+             <Node>
+              <Name>loadGcsUnconnectedView</Name>
+              <Path>classMainWindow.html</Path>
+              <Anchor>a7090a36ef63df1c4c4c8924f47f7685d</Anchor>
+             </Node>
+             <Node>
+              <Name>loadGcsViewState</Name>
+              <Path>classMainWindow.html</Path>
+              <Anchor>a7399a9c91dadafa3137191d5c332d1ed</Anchor>
              </Node>
              <Node>
               <Name>loadIndoorStyle</Name>
@@ -238,6 +310,16 @@
               <Anchor>a82c55b88ae395766858758e3acab9d15</Anchor>
              </Node>
              <Node>
+              <Name>currentView</Name>
+              <Path>classMainWindow.html</Path>
+              <Anchor>af44dfcba2a003d03de83ecf7796874b2</Anchor>
+             </Node>
+             <Node>
+              <Name>serialDockWidget</Name>
+              <Path>classMainWindow.html</Path>
+              <Anchor>af53dc5814be111b5e9b89a0121521bee</Anchor>
+             </Node>
+             <Node>
               <Name>styleFileName</Name>
               <Path>classMainWindow.html</Path>
               <Anchor>afda2a7357660cf45ea61ceefd3a805de</Anchor>
@@ -245,43 +327,83 @@
             </Subnodes>
            </Node>
            <Node>
-            <Name>SerialSettingsWindow</Name>
-            <Path>classSerialSettingsWindow.html</Path>
+            <Name>SerialSetting</Name>
+            <Path>classSerialSetting.html</Path>
             <Subnodes>
              <Node>
-              <Name>SerialSettingsWindow</Name>
-              <Path>classSerialSettingsWindow.html</Path>
-              <Anchor>a1bbdf8abb153013fd3cbf669925c95ae</Anchor>
+              <Name>SerialSetting</Name>
+              <Path>classSerialSetting.html</Path>
+              <Anchor>a793eb2d4f9f49df9d3c8500a27fc9735</Anchor>
              </Node>
              <Node>
-              <Name>~SerialSettingsWindow</Name>
-              <Path>classSerialSettingsWindow.html</Path>
-              <Anchor>a57039b17ef2e671c97b43e54fad99692</Anchor>
+              <Name>~SerialSetting</Name>
+              <Path>classSerialSetting.html</Path>
+              <Anchor>a4ba642458f99b10e22e1f9a43f8c333d</Anchor>
              </Node>
              <Node>
-              <Name>changeEvent</Name>
-              <Path>classSerialSettingsWindow.html</Path>
-              <Anchor>acff25731b54e1b013b64299f9034740a</Anchor>
+              <Name>onBaudRateChanged</Name>
+              <Path>classSerialSetting.html</Path>
+              <Anchor>a731751b968a3cc01b6bac24c48fa090c</Anchor>
+             </Node>
+             <Node>
+              <Name>onDataBitsChanged</Name>
+              <Path>classSerialSetting.html</Path>
+              <Anchor>a6fe7cab336ecb8793aab4991b2f2ad91</Anchor>
+             </Node>
+             <Node>
+              <Name>onParityChanged</Name>
+              <Path>classSerialSetting.html</Path>
+              <Anchor>a64ef135f5799566460732ba3fae90096</Anchor>
+             </Node>
+             <Node>
+              <Name>onPortAddedOrRemoved</Name>
+              <Path>classSerialSetting.html</Path>
+              <Anchor>a4c79daac71420645e0f9e4e0237f33b4</Anchor>
+             </Node>
+             <Node>
+              <Name>onPortNameChanged</Name>
+              <Path>classSerialSetting.html</Path>
+              <Anchor>aee23c747db7d4b761692cb470a4c6441</Anchor>
+             </Node>
+             <Node>
+              <Name>onQueryModeChanged</Name>
+              <Path>classSerialSetting.html</Path>
+              <Anchor>a39190796da46bab314e415d6b201a88a</Anchor>
+             </Node>
+             <Node>
+              <Name>onReadyRead</Name>
+              <Path>classSerialSetting.html</Path>
+              <Anchor>ae96ce05ba97f10540883ab443953f9af</Anchor>
+             </Node>
+             <Node>
+              <Name>onStopBitsChanged</Name>
+              <Path>classSerialSetting.html</Path>
+              <Anchor>ac4fd3c2da03602446306b18f36a47e9a</Anchor>
+             </Node>
+             <Node>
+              <Name>portNameChanged</Name>
+              <Path>classSerialSetting.html</Path>
+              <Anchor>a66f946af6177fc3ea2e3d37733c9b175</Anchor>
              </Node>
              <Node>
               <Name>enumerator</Name>
-              <Path>classSerialSettingsWindow.html</Path>
-              <Anchor>a8339b943bb39db2d960beafb55998ae4</Anchor>
+              <Path>classSerialSetting.html</Path>
+              <Anchor>abd56b753109f143d2958f7b67b2ec5f5</Anchor>
+             </Node>
+             <Node>
+              <Name>m_name</Name>
+              <Path>classSerialSetting.html</Path>
+              <Anchor>ab4d84835e2e62ba413234aeb8463cd6c</Anchor>
              </Node>
              <Node>
               <Name>port</Name>
-              <Path>classSerialSettingsWindow.html</Path>
-              <Anchor>ac3bbbfde64952967ca0ab6e8d29cbd19</Anchor>
+              <Path>classSerialSetting.html</Path>
+              <Anchor>aade7b364826c1ac427fd5bfdaea084e3</Anchor>
              </Node>
              <Node>
-              <Name>port_ui</Name>
-              <Path>classSerialSettingsWindow.html</Path>
-              <Anchor>ad88f704ab80a14b404624781c174ed39</Anchor>
-             </Node>
-             <Node>
-              <Name>timer</Name>
-              <Path>classSerialSettingsWindow.html</Path>
-              <Anchor>a8e89eeb9ae363512bbc42c9d33d2625a</Anchor>
+              <Name>serial_ui</Name>
+              <Path>classSerialSetting.html</Path>
+              <Anchor>a22df37ac81da97c7789f5090677a2835</Anchor>
              </Node>
             </Subnodes>
            </Node>
@@ -294,20 +416,6 @@
            <Node>
             <Name>HLed::Private</Name>
             <Path>structHLed_1_1Private.html</Path>
-           </Node>
-           <Node>
-            <Name>QDialog</Name>
-            <Path></Path>
-            <Subnodes>
-             <Node>
-              <Name>DebugConsole</Name>
-              <Path>classDebugConsole.html</Path>
-             </Node>
-             <Node>
-              <Name>SerialSettingsWindow</Name>
-              <Path>classSerialSettingsWindow.html</Path>
-             </Node>
-            </Subnodes>
            </Node>
            <Node>
             <Name>QMainWindow</Name>
@@ -324,8 +432,16 @@
             <Path></Path>
             <Subnodes>
              <Node>
+              <Name>DebugConsole</Name>
+              <Path>classDebugConsole.html</Path>
+             </Node>
+             <Node>
               <Name>HLed</Name>
               <Path>classHLed.html</Path>
+             </Node>
+             <Node>
+              <Name>SerialSetting</Name>
+              <Path>classSerialSetting.html</Path>
              </Node>
             </Subnodes>
            </Node>
@@ -388,6 +504,21 @@
                 <Name>~DebugConsole</Name>
                 <Path>classDebugConsole.html</Path>
                 <Anchor>aa6f51dd2956ff9a2b7d44e8b2754b52e</Anchor>
+               </Node>
+               <Node>
+                <Name>m_transmitButtonClick</Name>
+                <Path>classDebugConsole.html</Path>
+                <Anchor>a314853136abaeddfc8bd3be703d25a9a</Anchor>
+               </Node>
+               <Node>
+                <Name>sendData</Name>
+                <Path>classDebugConsole.html</Path>
+                <Anchor>af18fd20aca2775879ccee2d8e4e28342</Anchor>
+               </Node>
+               <Node>
+                <Name>updatePortNameChanged</Name>
+                <Path>classDebugConsole.html</Path>
+                <Anchor>ac5dba611ee5181bc07321a12a7e67427</Anchor>
                </Node>
                <Node>
                 <Name>debug_ui</Name>
@@ -569,6 +700,38 @@
                 </Subnodes>
                </Node>
                <Node>
+                <Name>GCS_VIEW_SECTIONS</Name>
+                <Path>classMainWindow.html</Path>
+                <Anchor>a1e35446b2e0751cae2216d909a2c529c</Anchor>
+                <Subnodes>
+                 <Node>
+                  <Name>VIEW_ENGINEER</Name>
+                  <Path>classMainWindow.html</Path>
+                  <Anchor>a1e35446b2e0751cae2216d909a2c529ca7450c3f1be825c36fa239e6512c26291</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>VIEW_OPERATOR</Name>
+                  <Path>classMainWindow.html</Path>
+                  <Anchor>a1e35446b2e0751cae2216d909a2c529cad68d872fd82c40740edfba1afbe3b3bf</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>VIEW_FIRMWAREUPDATE</Name>
+                  <Path>classMainWindow.html</Path>
+                  <Anchor>a1e35446b2e0751cae2216d909a2c529ca18a7745e7baa875e1d1e8aaf0e8c3912</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>VIEW_UNCONNECTED</Name>
+                  <Path>classMainWindow.html</Path>
+                  <Anchor>a1e35446b2e0751cae2216d909a2c529cae01c9ceb85f047ff97ef6db06d571e71</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>VIEW_FULL</Name>
+                  <Path>classMainWindow.html</Path>
+                  <Anchor>a1e35446b2e0751cae2216d909a2c529ca61869f1304b3a97f508a29f70789847e</Anchor>
+                 </Node>
+                </Subnodes>
+               </Node>
+               <Node>
                 <Name>MainWindow</Name>
                 <Path>classMainWindow.html</Path>
                 <Anchor>a8b244be8b7b7db1b08de2a2acb9409db</Anchor>
@@ -579,14 +742,39 @@
                 <Anchor>ae98d00a93bc118200eeef9f9bba1dba7</Anchor>
                </Node>
                <Node>
-                <Name>comPortOpenCloseButtonClick</Name>
+                <Name>getPortNameChanged</Name>
                 <Path>classMainWindow.html</Path>
-                <Anchor>a6fc6b8aa494a4a0752fdf1453cbba418</Anchor>
+                <Anchor>adfd184d2e25d4a6bece0f8a812f90d9d</Anchor>
                </Node>
                <Node>
                 <Name>getStyle</Name>
                 <Path>classMainWindow.html</Path>
                 <Anchor>ab17970f7cc7de1917e182a3fe4e1bbe5</Anchor>
+               </Node>
+               <Node>
+                <Name>loadGcsEngineerView</Name>
+                <Path>classMainWindow.html</Path>
+                <Anchor>aa8fd2f484f8d1eba49ec6739228f2c22</Anchor>
+               </Node>
+               <Node>
+                <Name>loadGcsFirmwareUpdateView</Name>
+                <Path>classMainWindow.html</Path>
+                <Anchor>ac1dc5f20a16d479e9627dd20fd51f8e9</Anchor>
+               </Node>
+               <Node>
+                <Name>loadGcsOperatorView</Name>
+                <Path>classMainWindow.html</Path>
+                <Anchor>a87ed188956aa26396fe413804c7ba39b</Anchor>
+               </Node>
+               <Node>
+                <Name>loadGcsUnconnectedView</Name>
+                <Path>classMainWindow.html</Path>
+                <Anchor>a7090a36ef63df1c4c4c8924f47f7685d</Anchor>
+               </Node>
+               <Node>
+                <Name>loadGcsViewState</Name>
+                <Path>classMainWindow.html</Path>
+                <Anchor>a7399a9c91dadafa3137191d5c332d1ed</Anchor>
                </Node>
                <Node>
                 <Name>loadIndoorStyle</Name>
@@ -639,6 +827,16 @@
                 <Anchor>a82c55b88ae395766858758e3acab9d15</Anchor>
                </Node>
                <Node>
+                <Name>currentView</Name>
+                <Path>classMainWindow.html</Path>
+                <Anchor>af44dfcba2a003d03de83ecf7796874b2</Anchor>
+               </Node>
+               <Node>
+                <Name>serialDockWidget</Name>
+                <Path>classMainWindow.html</Path>
+                <Anchor>af53dc5814be111b5e9b89a0121521bee</Anchor>
+               </Node>
+               <Node>
                 <Name>styleFileName</Name>
                 <Path>classMainWindow.html</Path>
                 <Anchor>afda2a7357660cf45ea61ceefd3a805de</Anchor>
@@ -648,51 +846,91 @@
             </Subnodes>
            </Node>
            <Node>
-            <Name>SerialConfigurationWindow.cpp</Name>
-            <Path>SerialConfigurationWindow_8cpp.html</Path>
+            <Name>SerialSetting.cpp</Name>
+            <Path>SerialSetting_8cpp.html</Path>
            </Node>
            <Node>
-            <Name>SerialConfigurationWindow.h</Name>
-            <Path>SerialConfigurationWindow_8h.html</Path>
+            <Name>SerialSetting.h</Name>
+            <Path>SerialSetting_8h.html</Path>
             <Subnodes>
              <Node>
-              <Name>SerialSettingsWindow</Name>
-              <Path>classSerialSettingsWindow.html</Path>
+              <Name>SerialSetting</Name>
+              <Path>classSerialSetting.html</Path>
               <Subnodes>
                <Node>
-                <Name>SerialSettingsWindow</Name>
-                <Path>classSerialSettingsWindow.html</Path>
-                <Anchor>a1bbdf8abb153013fd3cbf669925c95ae</Anchor>
+                <Name>SerialSetting</Name>
+                <Path>classSerialSetting.html</Path>
+                <Anchor>a793eb2d4f9f49df9d3c8500a27fc9735</Anchor>
                </Node>
                <Node>
-                <Name>~SerialSettingsWindow</Name>
-                <Path>classSerialSettingsWindow.html</Path>
-                <Anchor>a57039b17ef2e671c97b43e54fad99692</Anchor>
+                <Name>~SerialSetting</Name>
+                <Path>classSerialSetting.html</Path>
+                <Anchor>a4ba642458f99b10e22e1f9a43f8c333d</Anchor>
                </Node>
                <Node>
-                <Name>changeEvent</Name>
-                <Path>classSerialSettingsWindow.html</Path>
-                <Anchor>acff25731b54e1b013b64299f9034740a</Anchor>
+                <Name>onBaudRateChanged</Name>
+                <Path>classSerialSetting.html</Path>
+                <Anchor>a731751b968a3cc01b6bac24c48fa090c</Anchor>
+               </Node>
+               <Node>
+                <Name>onDataBitsChanged</Name>
+                <Path>classSerialSetting.html</Path>
+                <Anchor>a6fe7cab336ecb8793aab4991b2f2ad91</Anchor>
+               </Node>
+               <Node>
+                <Name>onParityChanged</Name>
+                <Path>classSerialSetting.html</Path>
+                <Anchor>a64ef135f5799566460732ba3fae90096</Anchor>
+               </Node>
+               <Node>
+                <Name>onPortAddedOrRemoved</Name>
+                <Path>classSerialSetting.html</Path>
+                <Anchor>a4c79daac71420645e0f9e4e0237f33b4</Anchor>
+               </Node>
+               <Node>
+                <Name>onPortNameChanged</Name>
+                <Path>classSerialSetting.html</Path>
+                <Anchor>aee23c747db7d4b761692cb470a4c6441</Anchor>
+               </Node>
+               <Node>
+                <Name>onQueryModeChanged</Name>
+                <Path>classSerialSetting.html</Path>
+                <Anchor>a39190796da46bab314e415d6b201a88a</Anchor>
+               </Node>
+               <Node>
+                <Name>onReadyRead</Name>
+                <Path>classSerialSetting.html</Path>
+                <Anchor>ae96ce05ba97f10540883ab443953f9af</Anchor>
+               </Node>
+               <Node>
+                <Name>onStopBitsChanged</Name>
+                <Path>classSerialSetting.html</Path>
+                <Anchor>ac4fd3c2da03602446306b18f36a47e9a</Anchor>
+               </Node>
+               <Node>
+                <Name>portNameChanged</Name>
+                <Path>classSerialSetting.html</Path>
+                <Anchor>a66f946af6177fc3ea2e3d37733c9b175</Anchor>
                </Node>
                <Node>
                 <Name>enumerator</Name>
-                <Path>classSerialSettingsWindow.html</Path>
-                <Anchor>a8339b943bb39db2d960beafb55998ae4</Anchor>
+                <Path>classSerialSetting.html</Path>
+                <Anchor>abd56b753109f143d2958f7b67b2ec5f5</Anchor>
+               </Node>
+               <Node>
+                <Name>m_name</Name>
+                <Path>classSerialSetting.html</Path>
+                <Anchor>ab4d84835e2e62ba413234aeb8463cd6c</Anchor>
                </Node>
                <Node>
                 <Name>port</Name>
-                <Path>classSerialSettingsWindow.html</Path>
-                <Anchor>ac3bbbfde64952967ca0ab6e8d29cbd19</Anchor>
+                <Path>classSerialSetting.html</Path>
+                <Anchor>aade7b364826c1ac427fd5bfdaea084e3</Anchor>
                </Node>
                <Node>
-                <Name>port_ui</Name>
-                <Path>classSerialSettingsWindow.html</Path>
-                <Anchor>ad88f704ab80a14b404624781c174ed39</Anchor>
-               </Node>
-               <Node>
-                <Name>timer</Name>
-                <Path>classSerialSettingsWindow.html</Path>
-                <Anchor>a8e89eeb9ae363512bbc42c9d33d2625a</Anchor>
+                <Name>serial_ui</Name>
+                <Path>classSerialSetting.html</Path>
+                <Anchor>a22df37ac81da97c7789f5090677a2835</Anchor>
                </Node>
               </Subnodes>
              </Node>

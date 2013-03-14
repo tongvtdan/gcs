@@ -2,7 +2,7 @@
 #define DEBUGCONSOLE_H
 
 #include <QWidget>
-
+#include "SerialSetting.h"
 namespace Ui {
 class DebugConsole;
 }
@@ -19,12 +19,16 @@ public:
 public slots:
     /*! @brief send data over serial*/
     void sendData();
+    void updatePortNameChanged(QString p_name);
+    void onConnectButtonClick(bool buttonstate);
+    void onDataReceive(QByteArray m_data);
 signals:
-    void m_transmitButtonClick();   /// signal when transmit button click
+    void m_connectButtonClick();   /// signal when transmit button click
+    void sendButtonClick(QByteArray m_text);
 
 
 private:
-//    Ui::DebugConsole *debug_ui;
+//    SerialSetting* m_serial;
 };
 
 #endif // DEBUGCONSOLE_H

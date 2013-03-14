@@ -1,0 +1,10 @@
+<map id="SerialSetting::SerialSetting" name="SerialSetting::SerialSetting">
+<area shape="rect" id="node2" href="$classSerialSetting.html#a731751b968a3cc01b6bac24c48fa090c" title="SerialSetting::onBaudRate\lChanged" alt="" coords="247,5,420,46"/>
+<area shape="rect" id="node3" href="$classSerialSetting.html#a64ef135f5799566460732ba3fae90096" title="SerialSetting::onParityChanged" alt="" coords="233,71,434,97"/>
+<area shape="rect" id="node4" href="$classSerialSetting.html#a6fe7cab336ecb8793aab4991b2f2ad91" title="SerialSetting::onDataBits\lChanged" alt="" coords="251,122,416,163"/>
+<area shape="rect" id="node5" href="$classSerialSetting.html#ac4fd3c2da03602446306b18f36a47e9a" title="SerialSetting::onStopBits\lChanged" alt="" coords="251,187,416,229"/>
+<area shape="rect" id="node6" href="$classSerialSetting.html#a39190796da46bab314e415d6b201a88a" title="SerialSetting::onQueryMode\lChanged" alt="" coords="241,253,425,294"/>
+<area shape="rect" id="node7" href="$classSerialSetting.html#aee23c747db7d4b761692cb470a4c6441" title="SerialSetting::onPortName\lChanged" alt="" coords="246,318,421,359"/>
+<area shape="rect" id="node9" href="$classSerialSetting.html#a4c79daac71420645e0f9e4e0237f33b4" title="SerialSetting::onPortAdded\lOrRemoved" alt="" coords="244,383,423,425"/>
+<area shape="rect" id="node8" href="$classSerialSetting.html#a66f946af6177fc3ea2e3d37733c9b175" title="SerialSetting::portNameChanged" alt="" coords="483,325,693,352"/>
+</map>
