@@ -49,7 +49,7 @@ protected:
 
     QPointer<QDockWidget> consoleDockWidget; // Debug consolse Dock widget
     QPointer<QDockWidget> serialDockWidget;
-    QPointer<QDockWidget> robotConfigDockWidget;
+    QPointer<GSSRobotConfig> robotConfigDockWidget;
     QStackedWidget *centerStack;
 
 
@@ -103,6 +103,16 @@ public slots:
     void getPortNameChanged(QString a_name);
     void handleConnection();    /// handle connection between Serial Setting and other widgets
     void onSendData(QByteArray m_data);    /// will call slot from Serial
+
+    /**
+     * @brief Shows a Widget from the center stack based on the action sender
+     *
+     * This slot is written to be used in conjunction with the addCentralWidget() function
+     * It shows the Widget based on the action sender
+     *
+     */
+    void showCentralWidget();
+
 private Q_SLOTS:
     void onComSettingTriggered();
     void onComOpenCloseTriggered();
