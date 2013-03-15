@@ -312,7 +312,7 @@ void MainWindow::createDockWidgets()
     robotConfigDockWidget = new QDockWidget(tr("Robot Configuration"), this);
     robotConfigDockWidget->setWidget(m_robotConfigWindow );
     robotConfigDockWidget->setObjectName("ROBOTCONFIG_DOCKWIDGET");
-    addDockWidget(Qt::LeftDockWidgetArea,robotConfigDockWidget);
+    addDockWidget(Qt::TopDockWidgetArea,robotConfigDockWidget);
 //      centerStack->addWidget(robotConfigDockWidget);
 //    addCentralWidget(robotConfigDockWidget,"Robot Configuration");
 
