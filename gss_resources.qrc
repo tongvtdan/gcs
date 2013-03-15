@@ -30,6 +30,8 @@
         <file>files/images_icons/apps/help-browser.png</file>
         <file>files/images_icons/apps/process-stop.png</file>
         <file>files/images_icons/apps/applications-system.png</file>
+        <file>files/images_icons/actions/go-down.svg</file>
+        <file>files/images_icons/actions/go-up.svg</file>
     </qresource>
     <qresource prefix="/general">
         <file>files/styles/Vera.ttf</file>

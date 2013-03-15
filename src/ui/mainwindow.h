@@ -3,10 +3,12 @@
 
 #include <QMainWindow>
 #include <QPointer>
+#include <QStackedWidget>
 
 #include "SerialSetting.h"
 #include "qextserialport.h"
 #include "DebugConsole.h"
+#include "GSSRobotConfig.h"
 namespace Ui {
 class MainWindow;
 }
@@ -36,6 +38,7 @@ public:
     };
     SerialSetting *m_SerialSettingWindow;
     DebugConsole *m_debugConsoleWindow;
+    GSSRobotConfig *m_robotConfigWindow;
 protected:
 
     GCS_MAINWINDOW_STYLE currentStyle;
@@ -46,8 +49,25 @@ protected:
 
     QPointer<QDockWidget> consoleDockWidget; // Debug consolse Dock widget
     QPointer<QDockWidget> serialDockWidget;
+    QPointer<QDockWidget> robotConfigDockWidget;
+    QStackedWidget *centerStack;
+
 
     void loadGcsViewState();
+
+    /**
+     * @brief Adds an already instantiated QWidget to the center stack
+     *
+     * This function does all the hosekeeping to have a QWidget added to the tools menu
+     * tools menu and connects the QMenuAction to a slot that shows the widget and
+     * checks/unchecks the tools menu item. This is used for all the central widgets (those in
+     * the center stack.
+     *
+     * @param widget        The QWidget being added
+     * @param title         The entry that will appear in the Menu
+     */
+    void addCentralWidget(QWidget* widget, const QString& title);
+
 
 public slots:
     /** @brief Load a specific style */

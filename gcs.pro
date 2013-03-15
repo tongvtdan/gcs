@@ -17,16 +17,19 @@ SOURCES += src/main.cpp\
         src/ui/mainwindow.cpp \
     src/ui/DebugConsole.cpp \
     src/ui/SerialSetting.cpp \
-    src/common/hled.cpp
+    src/common/hled.cpp \
+    src/ui/GSSRobotConfig.cpp
 
 HEADERS  += src/ui/mainwindow.h \
     src/ui/DebugConsole.h \
     src/ui/SerialSetting.h \
-    src/common/hled.h
+    src/common/hled.h \
+    src/ui/GSSRobotConfig.h
 
 FORMS    += src/ui/mainwindow.ui \
     src/ui/DebugConsole.ui \
-    src/ui/SerialSetting.ui
+    src/ui/SerialSetting.ui \
+    src/ui/GSSRobotConfig.ui
 
 OTHER_FILES += \
     ChangeLog.txt \

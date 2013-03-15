@@ -149,16 +149,17 @@ QSpinBox {
 
 QSpinBox::up-button {
     subcontrol-origin: border;
-    subcontrol-position: top right; /* position at the top right corner */
-    border-image: url(:/files/images/actions/go-up.svg) 1;
+    subcontrol-position: top right; /*position at the top right corner */
+    border-image: url(:files/images_icons/actions/go-up.svg) 1;
     border-width: 1px;
 }
 QSpinBox::down-button {
     subcontrol-origin: border;
     subcontrol-position: bottom right; /* position at the top right corner */
-    border-image: url(:/files/images/actions/go-down.svg) 1;
+    border-image: url(:files/images_icons/actions/go-down.svg) 1;
     border-width: 1px;
 }
+
 
 QDoubleSpinBox {
 	min-height: 14px;
@@ -170,14 +171,14 @@ QDoubleSpinBox {
 QDoubleSpinBox::up-button {
     subcontrol-origin: border;
     subcontrol-position: top right; /* position at the top right corner */
-    border-image: url(:/files/images/actions/go-up.svg) 1;
+    border-image: url(:files/images_icons/actions/go-up.svg) 1;
     border-width: 1px;
     max-width: 5px;
 }
 QDoubleSpinBox::down-button {
     subcontrol-origin: border;
     subcontrol-position: bottom right; /* position at the top right corner */
-    border-image: url(:/files/images/actions/go-down.svg) 1;
+    border-image: url(:files/images_icons/actions/go-down.svg) 1;
     border-width: 1px;
     max-width: 5px;
 }

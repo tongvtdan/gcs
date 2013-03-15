@@ -26,6 +26,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     m_SerialSettingWindow = new SerialSetting(this); /// create Serial Setting window
     m_debugConsoleWindow = new DebugConsole(this);  ///  create a debug console window
+    m_robotConfigWindow = new GSSRobotConfig(this); /// create a robot config window
 
     loadStyle(currentStyle);
 
@@ -61,22 +62,36 @@ void MainWindow::loadGcsViewState()
     case VIEW_ENGINEER:
         consoleDockWidget->show();
         serialDockWidget->show();
+        robotConfigDockWidget->show();
         break;
 
     case VIEW_OPERATOR:
         consoleDockWidget->hide();
         serialDockWidget->hide();
+        robotConfigDockWidget->hide();
         break;
     case VIEW_UNCONNECTED:
         consoleDockWidget->hide();
         serialDockWidget->show();
+        robotConfigDockWidget->hide();
         break;
     case VIEW_FIRMWAREUPDATE:
     case VIEW_FULL:
     default:
         consoleDockWidget->hide();
         serialDockWidget->hide();
+        robotConfigDockWidget->hide();
         break;
+    }
+}
+
+void MainWindow::addCentralWidget(QWidget *widget, const QString &title)
+{
+    // Check if this widget already has been added
+    if (centerStack->indexOf(widget) == -1)
+    {
+        centerStack->addWidget(widget);
+//        QAction* tempAction = ui->menu
     }
 }
 
@@ -223,7 +238,6 @@ void MainWindow::onSerialDataReady(QByteArray m_dataReceived)
 
 void MainWindow::getPortNameChanged(QString a_name)
 {
-    ui->messageDisplay->insertPlainText("Port changed"+a_name);     // update changed form Serial Setting window
     m_debugConsoleWindow->updatePortNameChanged(a_name);
     m_portName = a_name;// update to debug console window
 }
@@ -291,6 +305,17 @@ void MainWindow::createDockWidgets()
     serialDockWidget->setWidget(m_SerialSettingWindow );
     serialDockWidget->setObjectName("SERIALSETTING_DOCKWIDGET");
     addDockWidget(Qt::BottomDockWidgetArea,serialDockWidget);
+    }
+    if(!robotConfigDockWidget)
+    {
+    /** @brief Create Serial Setting widget */
+    robotConfigDockWidget = new QDockWidget(tr("Robot Configuration"), this);
+    robotConfigDockWidget->setWidget(m_robotConfigWindow );
+    robotConfigDockWidget->setObjectName("ROBOTCONFIG_DOCKWIDGET");
+    addDockWidget(Qt::LeftDockWidgetArea,robotConfigDockWidget);
+//      centerStack->addWidget(robotConfigDockWidget);
+//    addCentralWidget(robotConfigDockWidget,"Robot Configuration");
+
     }
 }
 void MainWindow::onSendData(QByteArray m_data)

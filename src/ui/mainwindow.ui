@@ -17,18 +17,7 @@
    <iconset resource="../../gss_resources.qrc">
     <normaloff>:/files/images_icons/apps/globe.ico</normaloff>:/files/images_icons/apps/globe.ico</iconset>
   </property>
-  <widget class="QWidget" name="centralWidget">
-   <widget class="QPlainTextEdit" name="messageDisplay">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>651</width>
-      <height>271</height>
-     </rect>
-    </property>
-   </widget>
-  </widget>
+  <widget class="QWidget" name="centralWidget"/>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
@@ -249,8 +238,8 @@
    <slot>showFullScreen()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>399</x>
-     <y>299</y>
+     <x>-1</x>
+     <y>-1</y>
     </hint>
     <hint type="destinationlabel">
      <x>399</x>
