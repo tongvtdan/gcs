@@ -283,12 +283,12 @@
         </property>
        </widget>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>480</x>
          <y>50</y>
-         <width>121</width>
+         <width>124</width>
          <height>41</height>
         </rect>
        </property>
@@ -299,12 +299,15 @@
            <string>Motor:</string>
           </property>
           <property name="buddy">
-           <cstring>comboBox</cstring>
+           <cstring>motorcomboBox</cstring>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QComboBox" name="comboBox">
+         <widget class="QComboBox" name="motorcomboBox">
+          <property name="editable">
+           <bool>true</bool>
+          </property>
           <item>
            <property name="text">
             <string>Driving motor</string>

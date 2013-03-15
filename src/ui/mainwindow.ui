@@ -17,7 +17,17 @@
    <iconset resource="../../gss_resources.qrc">
     <normaloff>:/files/images_icons/apps/globe.ico</normaloff>:/files/images_icons/apps/globe.ico</iconset>
   </property>
-  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QStackedWidget" name="mainStackedWidget">
+      <property name="currentIndex">
+       <number>-1</number>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>

@@ -50,8 +50,6 @@ protected:
     QPointer<QDockWidget> consoleDockWidget; // Debug consolse Dock widget
     QPointer<QDockWidget> serialDockWidget;
     QPointer<GSSRobotConfig> robotConfigDockWidget;
-    QStackedWidget *centerStack;
-
 
     void loadGcsViewState();
 
@@ -111,7 +109,6 @@ public slots:
      * It shows the Widget based on the action sender
      *
      */
-    void showCentralWidget();
 
 private Q_SLOTS:
     void onComSettingTriggered();

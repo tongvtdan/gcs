@@ -86,23 +86,7 @@ void MainWindow::loadGcsViewState()
     }
 }
 
-void MainWindow::addCentralWidget(QWidget *widget, const QString &title)
-{
-    // Check if this widget already has been added
 
-        centerStack->addWidget(widget);
-        QAction* tempAction = ui->menuMain_Widgets->addAction(title);
-        tempAction->setCheckable(true);
-        QVariant var;
-        var.setValue((QWidget*)widget);
-        tempAction->setData(var);
-//        centerStackActionGroup->addAction(tempAction);
-        connect(tempAction,SIGNAL(triggered()),this, SLOT(showCentralWidget()));
-        connect(widget, SIGNAL(visibilityChanged(bool)), tempAction, SLOT(setChecked(bool)));
-        tempAction->setChecked(widget->isVisible());
-
-
-}
 
 /** @brief For style control */
 /** @brief Load a specific style */
@@ -309,21 +293,21 @@ void MainWindow::createDockWidgets()
     }
     if(!serialDockWidget)
     {
-    /** @brief Create Serial Setting widget */
-    serialDockWidget = new QDockWidget(tr("Serial Setting"), this);
-    serialDockWidget->setWidget(m_SerialSettingWindow );
-    serialDockWidget->setObjectName("SERIALSETTING_DOCKWIDGET");
-    addDockWidget(Qt::BottomDockWidgetArea,serialDockWidget);
+        /** @brief Create Serial Setting widget */
+        serialDockWidget = new QDockWidget(tr("Serial Setting"), this);
+        serialDockWidget->setWidget(m_SerialSettingWindow );
+        serialDockWidget->setObjectName("SERIALSETTING_DOCKWIDGET");
+        addDockWidget(Qt::BottomDockWidgetArea,serialDockWidget);
     }
     if(!robotConfigDockWidget)
     {
-    /** @brief Create Serial Setting widget */
-//    robotConfigDockWidget = new QDockWidget(tr("Robot Configuration"), this);
-//    robotConfigDockWidget->setWidget(m_robotConfigWindow );
-//    robotConfigDockWidget->setObjectName("ROBOTCONFIG_DOCKWIDGET");
-//    addDockWidget(Qt::TopDockWidgetArea,robotConfigDockWidget);
-    robotConfigDockWidget = new GSSRobotConfig(this);
-    addCentralWidget(robotConfigDockWidget,tr("Robot Configuration"));
+        /** @brief Create Serial Setting widget */
+        //    robotConfigDockWidget = new QDockWidget(tr("Robot Configuration"), this);
+        //    robotConfigDockWidget->setWidget(m_robotConfigWindow );
+        //    robotConfigDockWidget->setObjectName("ROBOTCONFIG_DOCKWIDGET");
+        //    addDockWidget(Qt::TopDockWidgetArea,robotConfigDockWidget);
+        robotConfigDockWidget = new GSSRobotConfig(this);
+        addCentralWidget(robotConfigDockWidget,tr("Robot Configuration"));
 
     }
 }
@@ -336,9 +320,22 @@ void MainWindow::onSendData(QByteArray m_data)
 
 }
 
-void MainWindow::showCentralWidget()
+void MainWindow::addCentralWidget(QWidget *widget, const QString &title)
 {
-    QAction* act = qobject_cast<QAction *>(sender());
-    QWidget* widget =qvariant_cast<QWidget *>(act->data());
-    centerStack->setCurrentWidget(widget);
+    // Check if this widget already has been added
+
+        ui->mainStackedWidget->insertWidget(0, widget);
+        ui->mainStackedWidget->setCurrentIndex(0);
+
+//        centerStack->setCurrentWidget(widget);
+//        QAction* tempAction = ui->menuMain_Widgets->addAction(title);
+//        tempAction->setCheckable(true);
+//        QVariant var;
+//        var.setValue((QWidget*)widget);
+//        tempAction->setData(var);
+////        centerStackActionGroup->addAction(tempAction);
+//        connect(tempAction,SIGNAL(triggered()),this, SLOT(showCentralWidget()));
+//        connect(widget, SIGNAL(visibilityChanged(bool)), tempAction, SLOT(setChecked(bool)));
+//        tempAction->setChecked(widget->isVisible());
+
 }
