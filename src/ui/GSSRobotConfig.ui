@@ -7,20 +7,20 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>500</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>800</width>
-    <height>600</height>
+    <height>200</height>
    </size>
   </property>
   <property name="windowTitle">
    <string>Robot Configuration</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
-   <item row="0" column="0">
+   <item row="0" column="0" rowspan="2">
     <widget class="QGroupBox" name="groupBox">
      <property name="title">
       <string>Robot Selection:</string>
@@ -46,7 +46,7 @@
      </layout>
     </widget>
    </item>
-   <item row="0" column="1">
+   <item row="1" column="1">
     <spacer name="horizontalSpacer_2">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -66,20 +66,7 @@
      </property>
     </widget>
    </item>
-   <item row="0" column="3">
-    <spacer name="horizontalSpacer_4">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>41</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="0" column="4">
+   <item row="0" column="4" rowspan="2">
     <widget class="QPushButton" name="pushButton">
      <property name="minimumSize">
       <size>
@@ -92,7 +79,20 @@
      </property>
     </widget>
    </item>
-   <item row="0" column="5">
+   <item row="1" column="3">
+    <spacer name="horizontalSpacer_4">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>41</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="5">
     <spacer name="horizontalSpacer_3">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -105,7 +105,7 @@
      </property>
     </spacer>
    </item>
-   <item row="1" column="0" colspan="6">
+   <item row="2" column="0" colspan="6">
     <widget class="QTabWidget" name="robotGTabWidget">
      <property name="currentIndex">
       <number>0</number>
@@ -332,6 +332,25 @@
       <attribute name="title">
        <string>Sensor Calibration</string>
       </attribute>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>50</y>
+         <width>441</width>
+         <height>261</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../../files/images_icons/gssRobot/G1.PNG</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
      </widget>
     </widget>
    </item>

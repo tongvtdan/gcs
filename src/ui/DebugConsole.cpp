@@ -71,7 +71,8 @@ void DebugConsole::onDataReceive(QByteArray m_data)
         }
     }
 
-    if(str[str.length()-1] == '#')      /// detect the package stop sign
+    if(str[str.length()-1] == '#')      /// detect the package stop sign #
+//    if(str.length() == 4)               ///  detect number of bytes.
     {
         debug_ui->receiveText->appendHtml(QString("<font color=\"green\">string Reveiced: %1</font>").arg(str)) ;
         str = "";
