@@ -2,7 +2,7 @@
 #include "ui_DebugConsole.h"
 #include "SerialSetting.h"
 #include <QDebug>
-#include "mainwindow.h"
+
 QString portName;
 
 DebugConsole::DebugConsole(QWidget *parent) :
@@ -11,13 +11,10 @@ DebugConsole::DebugConsole(QWidget *parent) :
 {
     debug_ui->setupUi(this);
 
-    m_mainwindow = new MainWindow(this);
-
     connect(debug_ui->sendText, SIGNAL(returnPressed()),SLOT(sendData()));
     connect(debug_ui->sendButton,SIGNAL(clicked()),SLOT(sendData()));
     connect(debug_ui->connectButton,SIGNAL(clicked()),SIGNAL(m_connectButtonClick()));
-//    connect(debug_ui->connectButton,SIGNAL(toggled(bool)),SLOT(onConnectButtonClick(bool)));
-    connect(m_mainwindow, SIGNAL(connectionStatus(bool)), SLOT(onConnectButtonClick(bool)));
+    connect(debug_ui->connectButton,SIGNAL(toggled(bool)),SLOT(onConnectButtonClick(bool)));
 
 }
 
