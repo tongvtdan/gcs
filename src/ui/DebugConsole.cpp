@@ -2,15 +2,22 @@
 #include "ui_DebugConsole.h"
 #include "SerialSetting.h"
 #include <QDebug>
+#include "mainwindow.h"
+QString portName;
+
 DebugConsole::DebugConsole(QWidget *parent) :
     QWidget(parent),
     debug_ui(new Ui::DebugConsole)
 {
     debug_ui->setupUi(this);
+
+    m_mainwindow = new MainWindow(this);
+
     connect(debug_ui->sendText, SIGNAL(returnPressed()),SLOT(sendData()));
     connect(debug_ui->sendButton,SIGNAL(clicked()),SLOT(sendData()));
     connect(debug_ui->connectButton,SIGNAL(clicked()),SIGNAL(m_connectButtonClick()));
-    connect(debug_ui->connectButton,SIGNAL(toggled(bool)),SLOT(onConnectButtonClick(bool)));
+//    connect(debug_ui->connectButton,SIGNAL(toggled(bool)),SLOT(onConnectButtonClick(bool)));
+    connect(m_mainwindow, SIGNAL(connectionStatus(bool)), SLOT(onConnectButtonClick(bool)));
 
 }
 
@@ -29,6 +36,7 @@ void DebugConsole::sendData()
 
 void DebugConsole::updatePortNameChanged(QString p_name)
 {
+    portName = p_name;
     debug_ui->receiveText->appendHtml(QString("<font color=\"red\">Port %1 is selected!</font>\n").arg((p_name)));
 }
 
@@ -37,12 +45,12 @@ void DebugConsole::onConnectButtonClick(bool buttonstate)
     if(buttonstate)
     {
         debug_ui->connectButton->setText("Disconn.");
-        debug_ui->receiveText->appendHtml(QString("<font color=\"yellow\">Port is connected </font>\n"));
+        debug_ui->receiveText->appendHtml(QString("<font color=\"yellow\">Port %1 is connected </font>\n").arg(portName));
     }
     else
     {
         debug_ui->connectButton->setText("Connect");
-        debug_ui->receiveText->appendHtml(QString("<font color=\"yellow\">Port is disconnected </font>\n"));
+        debug_ui->receiveText->appendHtml(QString("<font color=\"yellow\">Port %1 is disconnected </font>\n").arg(portName));
     }
 }
 
@@ -78,4 +86,9 @@ void DebugConsole::onDataReceive(QByteArray m_data)
         str = "";
     }
 
+}
+
+void DebugConsole::updateLog(QString msgLog)
+{
+    debug_ui->receiveText->appendHtml(QString("<font color=\"white\">Message Sent: %1</font>").arg(msgLog));
 }

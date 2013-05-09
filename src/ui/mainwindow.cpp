@@ -49,6 +49,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(m_debugConsoleWindow,SIGNAL(m_connectButtonClick()),SLOT(handleConnection()));
     connect(m_debugConsoleWindow,SIGNAL(sendButtonClick(QByteArray)),SLOT(onSendData(QByteArray)));
     connect(m_SerialSettingWindow,SIGNAL(dataAvailable(QByteArray)),SLOT(onSerialDataReady(QByteArray)));
+    connect(robotConfigDockWidget, SIGNAL(naviButtonClick(QByteArray)), SLOT (onSendData(QByteArray)));
 }
 
 MainWindow::~MainWindow()
@@ -232,7 +233,9 @@ void MainWindow::onSerialDataReady(QByteArray m_dataReceived)
 void MainWindow::getPortNameChanged(QString a_name)
 {
     m_debugConsoleWindow->updatePortNameChanged(a_name);
-    m_portName = a_name;// update to debug console window
+    m_portName = a_name;// update port control to debug console window
+//    handleConnection();
+
 }
 
 void MainWindow::handleConnection()
@@ -241,13 +244,15 @@ void MainWindow::handleConnection()
     {
         m_SerialSettingWindow->SerialSetting::port->close();
         ui->actionConnect->setText("Connect");
+        emit connectionStatus(false);           // send a signal say that port is closed
 
     }
     else
     {
         m_SerialSettingWindow->SerialSetting::port->setPortName(m_portName);
         m_SerialSettingWindow->SerialSetting::port->open(QIODevice::ReadWrite);
-         ui->actionConnect->setText("Disconn.");
+        ui->actionConnect->setText("Disconn.");
+        emit connectionStatus(true);    // send a signal say that port is opened
     }
      m_SerialSettingWindow->updatePortStatus();
 }
@@ -289,7 +294,7 @@ void MainWindow::createDockWidgets()
         consoleDockWidget = new QDockWidget(tr("Communication Console"), this);
         consoleDockWidget->setWidget(m_debugConsoleWindow );
         consoleDockWidget->setObjectName("DEBUGCONSOLE_DOCKWIDGET");
-        addDockWidget(Qt::BottomDockWidgetArea,consoleDockWidget);
+        addDockWidget(Qt::LeftDockWidgetArea,consoleDockWidget);
     }
     if(!serialDockWidget)
     {
@@ -297,15 +302,11 @@ void MainWindow::createDockWidgets()
         serialDockWidget = new QDockWidget(tr("Serial Setting"), this);
         serialDockWidget->setWidget(m_SerialSettingWindow );
         serialDockWidget->setObjectName("SERIALSETTING_DOCKWIDGET");
-        addDockWidget(Qt::BottomDockWidgetArea,serialDockWidget);
+        addDockWidget(Qt::LeftDockWidgetArea,serialDockWidget);
     }
     if(!robotConfigDockWidget)
     {
         /** @brief Create Serial Setting widget */
-        //    robotConfigDockWidget = new QDockWidget(tr("Robot Configuration"), this);
-        //    robotConfigDockWidget->setWidget(m_robotConfigWindow );
-        //    robotConfigDockWidget->setObjectName("ROBOTCONFIG_DOCKWIDGET");
-        //    addDockWidget(Qt::TopDockWidgetArea,robotConfigDockWidget);
         robotConfigDockWidget = new GSSRobotConfig(this);
         addCentralWidget(robotConfigDockWidget,tr("Robot Configuration"));
 
@@ -316,6 +317,7 @@ void MainWindow::onSendData(QByteArray m_data)
     if(m_SerialSettingWindow->SerialSetting::port->isOpen())
     {
         m_SerialSettingWindow->SerialSetting::port->write(m_data);
+        m_debugConsoleWindow->updateLog(QString::fromLatin1(m_data));
     }
 
 }
@@ -327,15 +329,5 @@ void MainWindow::addCentralWidget(QWidget *widget, const QString &title)
         ui->mainStackedWidget->insertWidget(0, widget);
         ui->mainStackedWidget->setCurrentIndex(0);
 
-//        centerStack->setCurrentWidget(widget);
-//        QAction* tempAction = ui->menuMain_Widgets->addAction(title);
-//        tempAction->setCheckable(true);
-//        QVariant var;
-//        var.setValue((QWidget*)widget);
-//        tempAction->setData(var);
-////        centerStackActionGroup->addAction(tempAction);
-//        connect(tempAction,SIGNAL(triggered()),this, SLOT(showCentralWidget()));
-//        connect(widget, SIGNAL(visibilityChanged(bool)), tempAction, SLOT(setChecked(bool)));
-//        tempAction->setChecked(widget->isVisible());
 
 }

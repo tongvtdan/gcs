@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include "SerialSetting.h"
+#include "src/ui/mainwindow.h"
 namespace Ui {
 class DebugConsole;
 }
@@ -16,12 +17,15 @@ public:
     ~DebugConsole();
 
     Ui::DebugConsole *debug_ui;
+    MainWindow *m_mainwindow;
 public slots:
     /*! @brief send data over serial*/
     void sendData();
     void updatePortNameChanged(QString p_name);
     void onConnectButtonClick(bool buttonstate);
     void onDataReceive(QByteArray m_data);
+    void updateLog(QString msgLog);
+
 //    void onAutoPackageSignChanged();
 //    void onStartSignChanged();
 //    void onStopSignChanged();

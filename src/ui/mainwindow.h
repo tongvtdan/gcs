@@ -116,7 +116,8 @@ private Q_SLOTS:
     void onDebugConsoleTriggered();
 
 
-
+signals:
+    void connectionStatus(bool comportStatus);
 private:
     Ui::MainWindow *ui;
 
